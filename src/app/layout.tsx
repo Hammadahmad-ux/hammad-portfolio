@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/next";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { siteUrl } from "@/lib/site-url";
 import "./globals.css";
@@ -81,6 +82,8 @@ export default function RootLayout({
         </a>
         {children}
         <ScrollReveal />
+        {/* Vercel Web Analytics: page views only, no custom events. */}
+        <Analytics />
       </body>
     </html>
   );
