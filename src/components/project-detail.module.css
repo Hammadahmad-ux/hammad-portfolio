@@ -1,0 +1,621 @@
+.detail {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  color: #1b1b19;
+}
+
+.shell {
+  width: min(91.4%, 1440px);
+  margin-inline: auto;
+}
+
+.eyebrow {
+  margin: 0 0 30px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.outline {
+  display: block;
+  color: transparent;
+  -webkit-text-stroke: 1px #636361;
+}
+
+/* ------------------------------------------------------------------ hero -- */
+.hero {
+  padding-top: clamp(100px, 7.5vw, 132px);
+}
+.title {
+  margin: 0;
+  font-family: var(--font-anton), Impact, sans-serif;
+  font-weight: 400;
+  font-size: clamp(52px, 9vw, 156px);
+  line-height: 0.96;
+  letter-spacing: -0.032em;
+  text-wrap: balance;
+}
+.lead {
+  max-width: 56ch;
+  margin: clamp(28px, 3vw, 40px) 0 0;
+  padding-top: clamp(26px, 3vw, 38px);
+  border-top: 1px solid #deded9;
+  color: #62625e;
+  font-size: clamp(15px, 1.35vw, 18px);
+  line-height: 1.72;
+}
+
+/* -------------------------------------------------------------- showcase -- */
+.showcase {
+  padding-block: clamp(56px, 7vw, 96px) 0;
+}
+.showcaseGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.85fr);
+  column-gap: clamp(40px, 5vw, 92px);
+  align-items: stretch;
+}
+.showcaseMedia {
+  position: relative;
+  align-self: start;
+  display: grid;
+  aspect-ratio: 16 / 9;
+  place-items: center;
+  overflow: hidden;
+  /* Neutral ground so a real screenshot is never cropped to fill the frame. */
+  background: #eeefeb;
+}
+.showcaseImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+/* A cover that already matches the frame fills it edge to edge. */
+.showcaseImageFill {
+  object-fit: cover;
+}
+.showcasePhone {
+  position: absolute;
+  right: 4%;
+  bottom: 5%;
+  display: block;
+  width: 13%;
+  min-width: 74px;
+  max-width: 150px;
+  aspect-ratio: 390 / 844;
+  overflow: hidden;
+  border: 1px solid rgb(245 245 241 / 55%);
+  border-radius: 14px;
+  background: #1b1b19;
+  box-shadow: 0 18px 40px rgb(27 27 25 / 28%);
+}
+.showcasePhoneImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* ------------------------------------------------------------ info panel -- */
+/* Flat editorial column: no card, no radius, only hairline rules. */
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 4px;
+}
+.panelTitle {
+  margin: 0 0 clamp(12px, 1.2vw, 16px);
+  color: #9a9a92;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.panelSummary {
+  margin: 0 0 clamp(16px, 1.6vw, 22px);
+  color: #43433e;
+  font-size: clamp(13px, 1.05vw, 15px);
+  line-height: 1.6;
+  letter-spacing: -0.005em;
+}
+.info {
+  /* Stretches to the image height, so its closing rule lands on the image foot. */
+  flex: 1;
+  margin: 0;
+  border-top: 1px solid #1b1b19;
+  border-bottom: 1px solid #e3e3de;
+}
+.infoRow:last-child {
+  border-bottom: 0;
+}
+.infoRow {
+  display: grid;
+  grid-template-columns: minmax(88px, 0.55fr) minmax(0, 1fr);
+  gap: 18px;
+  padding: clamp(10px, 1.1vw, 15px) 0;
+  border-bottom: 1px solid #e3e3de;
+}
+.infoRow dt {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  color: #8b8b83;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.infoIndex {
+  color: #c2c2ba;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.06em;
+}
+.infoRow dd {
+  margin: 0;
+  color: #101010;
+  font-size: clamp(14px, 1.1vw, 16px);
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -0.012em;
+  overflow-wrap: anywhere;
+}
+.plainList,
+.toolList {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 14px;
+  row-gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.plainList li,
+.toolList li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+/* Hairline separator between wrapped entries, never before the first. */
+.plainList li:not(:first-child)::before,
+.toolList li:not(:first-child)::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: #c2c2ba;
+}
+.toolIcon {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  color: #77776f;
+}
+
+/* -------------------------------------------------------------- sections -- */
+.section {
+  padding-block: clamp(64px, 8vw, 112px) 0;
+}
+.splitGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.5fr);
+  column-gap: clamp(40px, 5vw, 100px);
+  padding-top: clamp(34px, 4vw, 52px);
+  border-top: 1px solid #deded9;
+}
+.sectionHead {
+  align-self: start;
+}
+.sectionNumber {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0 0 clamp(14px, 1.5vw, 20px);
+  color: #8b8b83;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.sectionNumber span {
+  color: #1b1b19;
+  font-variant-numeric: tabular-nums;
+}
+.sectionNumber span::after {
+  content: " /";
+  color: #c2c2ba;
+}
+.sectionHeading {
+  margin: 0;
+  font-family: var(--font-anton), Impact, sans-serif;
+  font-weight: 400;
+  font-size: clamp(40px, 5.2vw, 84px);
+  line-height: 1.04;
+  letter-spacing: -0.028em;
+}
+.splitBody {
+  max-width: 66ch;
+}
+.bodyLead {
+  margin: 0;
+  color: #33332f;
+  font-size: clamp(17px, 1.6vw, 22px);
+  line-height: 1.62;
+  letter-spacing: -0.012em;
+}
+.body {
+  margin: 0;
+  color: #62625e;
+  font-size: clamp(15px, 1.35vw, 17px);
+  line-height: 1.78;
+}
+
+/* ------------------------------------------------------- challenge/solution */
+.storyGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(40px, 5vw, 92px);
+  padding-top: clamp(34px, 4vw, 52px);
+  border-top: 1px solid #deded9;
+}
+.story .sectionHeading {
+  font-size: clamp(38px, 4.6vw, 72px);
+}
+.story .sectionHead {
+  margin-bottom: clamp(22px, 2.4vw, 32px);
+}
+
+/* -------------------------------------------------------------- features -- */
+.features {
+  margin: clamp(34px, 4vw, 52px) 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid #1b1b19;
+}
+.features li {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: clamp(18px, 2.4vw, 34px);
+  align-items: baseline;
+  padding: clamp(20px, 2.2vw, 30px) 0;
+  border-bottom: 1px solid #e3e3de;
+}
+.featureIndex {
+  color: #b3b3ab;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  font-variant-numeric: tabular-nums;
+}
+.featureText {
+  color: #131311;
+  font-size: clamp(19px, 2vw, 30px);
+  line-height: 1.24;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+/* ------------------------------------------------------------------- cta -- */
+.cta {
+  padding-block: clamp(56px, 7vw, 96px) 0;
+}
+/* The actions follow the showcase directly, so the next section sits closer. */
+.cta + .section {
+  padding-top: clamp(44px, 5vw, 72px);
+}
+/* Each action is a full-width rule-to-rule row with the arrow at the edge. */
+.cta .shell {
+  border-top: 1px solid #1b1b19;
+}
+.ctaLink {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: clamp(16px, 2vw, 32px);
+  align-items: center;
+  padding: clamp(20px, 2.4vw, 32px) 0;
+  border-bottom: 1px solid #e3e3de;
+  overflow: hidden;
+}
+.ctaLabel {
+  font-family: var(--font-anton), Impact, sans-serif;
+  font-weight: 400;
+  font-size: clamp(24px, 3.2vw, 46px);
+  line-height: 1.06;
+  letter-spacing: -0.024em;
+  text-transform: uppercase;
+  transition: transform 520ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.ctaHost {
+  color: #8b8b83;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: color 420ms ease;
+}
+.ctaLink svg {
+  width: clamp(22px, 2.4vw, 30px);
+  height: clamp(22px, 2.4vw, 30px);
+  transition: transform 520ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.ctaLink:is(:hover, :focus-visible) .ctaLabel {
+  transform: translateX(clamp(6px, 0.9vw, 14px));
+}
+.ctaLink:is(:hover, :focus-visible) .ctaHost {
+  color: #1b1b19;
+}
+.ctaLink:is(:hover, :focus-visible) svg {
+  transform: translate(5px, -5px);
+}
+
+/* --------------------------------------------------------- more projects -- */
+.more {
+  padding-block: clamp(76px, 9vw, 128px) clamp(72px, 8vw, 112px);
+  border-top: 1px solid #deded9;
+  margin-top: clamp(76px, 9vw, 124px);
+}
+.more .eyebrow {
+  color: #777771;
+  margin-bottom: clamp(20px, 2.4vw, 30px);
+}
+.moreHeading {
+  margin: 0;
+  font-family: var(--font-anton), Impact, sans-serif;
+  font-weight: 400;
+  font-size: clamp(42px, 6vw, 96px);
+  line-height: 1.04;
+  letter-spacing: -0.028em;
+}
+.marquee {
+  --marquee-duration: 40s;
+  position: relative;
+  margin-top: clamp(44px, 5vw, 72px);
+  /* The lane overflows itself only; the page never scrolls sideways. */
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 5%,
+    #000 95%,
+    transparent
+  );
+}
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  animation: marqueeSlide var(--marquee-duration) linear infinite;
+}
+.marquee:hover .marqueeTrack,
+.marquee:focus-within .marqueeTrack {
+  animation-play-state: paused;
+}
+.marqueeGroup {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.marqueeItem {
+  flex: 0 0 auto;
+  width: clamp(230px, 24vw, 330px);
+  padding-right: clamp(20px, 2.2vw, 34px);
+}
+.marqueeCard {
+  display: block;
+}
+.marqueeMedia {
+  display: grid;
+  aspect-ratio: 16 / 9;
+  place-items: center;
+  overflow: hidden;
+  background: #eeefeb;
+}
+.marqueeImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.marqueeCard:is(:hover, :focus-visible) .marqueeImage {
+  transform: scale(1.04);
+}
+.marqueeMeta {
+  display: block;
+  padding-top: 16px;
+  border-top: 1px solid #deded9;
+  margin-top: 16px;
+}
+.marqueeTitle {
+  display: block;
+  font-family: var(--font-anton), Impact, sans-serif;
+  font-size: clamp(19px, 1.7vw, 26px);
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+}
+.marqueeCategory {
+  display: block;
+  margin-top: 8px;
+  color: #777771;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+@keyframes marqueeSlide {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* ------------------------------------------------------------ responsive -- */
+@media (max-width: 1100px) {
+  .showcaseGrid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(250px, 0.9fr);
+  }
+  .splitGrid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.5fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .showcaseGrid,
+  .splitGrid,
+  .storyGrid {
+    display: block;
+  }
+  .panel {
+    height: auto;
+    margin-top: clamp(34px, 4vw, 46px);
+  }
+  .info {
+    flex: none;
+  }
+  .splitBody {
+    margin-top: clamp(24px, 3vw, 34px);
+  }
+  .storyGrid > .story + .story {
+    margin-top: clamp(48px, 6vw, 72px);
+  }
+}
+
+@media (max-width: 767px) {
+  .shell {
+    width: 88%;
+  }
+  .hero {
+    padding-top: 96px;
+  }
+  .eyebrow {
+    margin-bottom: 22px;
+    font-size: 10px;
+  }
+  .title {
+    font-size: clamp(40px, 12.5vw, 70px);
+    line-height: 1.02;
+  }
+  .lead {
+    margin-top: 26px;
+    padding-top: 24px;
+    font-size: 14px;
+  }
+  .showcase {
+    padding-top: 46px;
+  }
+  .showcasePhone {
+    width: 20%;
+    min-width: 62px;
+  }
+  .infoRow {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+    padding: 14px 0;
+  }
+  .infoRow dd {
+    font-size: 15px;
+  }
+  .panelSummary {
+    font-size: 14px;
+  }
+  .section {
+    padding-top: 56px;
+  }
+  .splitGrid,
+  .storyGrid {
+    padding-top: 28px;
+  }
+  .sectionHeading,
+  .story .sectionHeading {
+    font-size: clamp(36px, 11vw, 58px);
+  }
+  .body {
+    font-size: 13px;
+  }
+  .bodyLead {
+    font-size: 16px;
+  }
+  .features li {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 14px;
+    padding: 16px 0;
+  }
+  .featureText {
+    font-size: 18px;
+  }
+  .cta {
+    padding-top: 50px;
+  }
+  .ctaLink {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px 14px;
+    padding: 18px 0;
+  }
+  .ctaLabel {
+    font-size: 22px;
+  }
+  /* The host drops beneath the label so the arrow keeps the right edge. */
+  .ctaHost {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 10px;
+  }
+  .ctaLink svg {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+  .more {
+    margin-top: 62px;
+    padding-block: 62px;
+  }
+  .moreHeading {
+    font-size: clamp(38px, 11vw, 58px);
+  }
+  .marquee {
+    --marquee-duration: 30s;
+  }
+  .marqueeItem {
+    width: 214px;
+    padding-right: 16px;
+  }
+  .marqueeTitle {
+    font-size: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .detail *,
+  .detail *::before,
+  .detail *::after {
+    transition: none !important;
+  }
+  /* No movement: the lane becomes a plain horizontal scroller instead. */
+  .marquee {
+    overflow-x: auto;
+    mask-image: none;
+  }
+  .marqueeTrack {
+    animation: none;
+    width: auto;
+  }
+  .marqueeGroup[aria-hidden="true"] {
+    display: none;
+  }
+  .marqueeImage,
+  .ctaLink:is(:hover, :focus-visible) .ctaLabel,
+  .ctaLink:is(:hover, :focus-visible) svg {
+    transform: none !important;
+  }
+}
