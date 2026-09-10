@@ -22,25 +22,25 @@ const writtenTestimonials = [
     name: "Daniel Roberts",
     service: "Website Development",
     feedback:
-      "Working with Hammad Ahmad was a smooth experience from start to finish. He understood what I wanted, improved the ideas I already had, and delivered a website that looks professional on both desktop and mobile. Communication was clear throughout the project and changes were handled quickly.",
+      "Hammad was really easy to work with and understood what I wanted without too much back and forth. The final website looked clean, professional, and worked perfectly on mobile too.",
   },
   {
     name: "Sophie Bennett",
     service: "AI Automation",
     feedback:
-      "Hammad helped us automate a process that was taking far too much manual time. He took the time to understand how we worked before building anything, then created a solution that was simple for us to use. He was responsive, practical, and stayed focused on the actual business problem.",
+      "Really happy with the result. Hammad was quick, responsive, and made the whole process easy.",
   },
   {
     name: "James Carter",
     service: "Website Redesign",
     feedback:
-      "I hired Hammad to improve our existing website, and the difference was noticeable straight away. The new design feels much cleaner, easier to navigate, and more aligned with our business. He was also very open to feedback and made revisions without making the process complicated.",
+      "Our old website needed a proper refresh and Hammad handled it really well. He gave useful suggestions, made the changes quickly, and the new version feels much more professional.",
   },
   {
     name: "Olivia Thompson",
     service: "Custom Software Project",
     feedback:
-      "Hammad was reliable throughout the project and communicated progress clearly. What I appreciated most was that he didn’t just follow instructions blindly—he suggested better ways to approach certain parts of the project when needed. The final result worked well and was delivered professionally.",
+      "Great experience working with Hammad — everything was delivered properly and communication was solid.",
   },
 ];
 
