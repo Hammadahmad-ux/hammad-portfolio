@@ -256,7 +256,11 @@ export function ProjectGallery() {
         {projectCategories.find((item) => item.id === category)?.label}: showing{" "}
         {categoryProjects.length} projects.
       </p>
-      <div className={styles.projectGrid} id="project-results" data-reveal>
+      <div
+        className={styles.projectGrid}
+        id="project-results"
+        data-reveal="stagger"
+      >
         {categoryProjects.map((project, index) => (
           <ProjectItem
             key={project.slug}

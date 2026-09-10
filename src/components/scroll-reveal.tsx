@@ -5,15 +5,13 @@ import { usePathname } from "next/navigation";
 
 /**
  * Marks `[data-reveal]` elements as revealed once they reach the viewport.
- * The transition itself is CSS; this only flips an attribute. A plain scroll
- * listener is used rather than IntersectionObserver so the reveal still runs
- * in embedded//preview browsers where observer callbacks are throttled away.
+ * The transition itself is CSS; this component only flips an attribute.
  */
 export function ScrollReveal() {
   const pathname = usePathname();
 
   useEffect(() => {
-    let pending = Array.from(
+    const pending = Array.from(
       document.querySelectorAll<HTMLElement>(
         "[data-reveal]:not([data-revealed])",
       ),
@@ -28,33 +26,36 @@ export function ScrollReveal() {
       return;
     }
 
-    const stop = () => {
-      window.removeEventListener("scroll", check);
-      window.removeEventListener("resize", check);
-    };
-
-    function check() {
-      // Read every rect first, then write, so nothing thrashes layout.
-      const limit = window.innerHeight * 0.92;
-      // Anything at or past the trigger line counts, so jumping down the page
-      // (anchor links, fast scrolling) never leaves a section stuck hidden.
-      const ready = pending.filter(
-        (element) => element.getBoundingClientRect().top < limit,
-      );
-      if (ready.length > 0) {
-        reveal(ready);
-        pending = pending.filter(
-          (element) => !element.hasAttribute("data-revealed"),
-        );
-      }
-      if (pending.length === 0) stop();
+    if (!("IntersectionObserver" in window)) {
+      reveal(pending);
+      return;
     }
 
-    window.addEventListener("scroll", check, { passive: true });
-    window.addEventListener("resize", check);
-    check();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const element = entry.target as HTMLElement;
+          element.setAttribute("data-revealed", "");
+          observer.unobserve(element);
+        });
+      },
+      {
+        rootMargin: "0px 0px -12% 0px",
+        threshold: 0.06,
+      },
+    );
 
-    return stop;
+    // Waiting for the next frame guarantees the hidden state is painted first,
+    // so above-the-fold reveal elements animate instead of appearing instantly.
+    const frame = window.requestAnimationFrame(() => {
+      pending.forEach((element) => observer.observe(element));
+    });
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+      observer.disconnect();
+    };
   }, [pathname]);
 
   return null;

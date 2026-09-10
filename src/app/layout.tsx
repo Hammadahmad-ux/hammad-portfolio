@@ -73,7 +73,7 @@ export default function RootLayout({
           <style
             dangerouslySetInnerHTML={{
               __html:
-                "[data-reveal]{opacity:1!important;transform:none!important}",
+                '[data-reveal],[data-reveal="stagger"]>*{opacity:1!important;transform:none!important}',
             }}
           />
         </noscript>

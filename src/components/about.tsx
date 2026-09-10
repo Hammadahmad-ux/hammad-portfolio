@@ -36,7 +36,7 @@ export function About() {
       <div className={`${styles.shell} ${styles.aboutInner}`}>
         <p className={styles.eyebrow}>03 / ABOUT</p>
         {/* Statement, portrait, figures — and that is the mobile order too. */}
-        <div className={styles.aboutGrid} data-reveal>
+        <div className={styles.aboutGrid} data-reveal="stagger">
           <div className={styles.aboutMain}>
             <h2 className={styles.aboutHeading} id="about-title">
               About

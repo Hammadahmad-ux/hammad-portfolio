@@ -16,13 +16,12 @@ export function Services() {
           <br />
           <span className={styles.outline}>experiences that work.</span>
         </h2>
-        <div className={styles.serviceList}>
+        <div className={styles.serviceList} data-reveal="stagger">
           {services.map((service) => (
             // The whole row links to Selected Work; the gallery reads the
             // category off the link and switches its filter to match.
             <a
               className={styles.serviceRow}
-              data-reveal
               href="#projects"
               data-project-category={service.category}
               key={service.number}

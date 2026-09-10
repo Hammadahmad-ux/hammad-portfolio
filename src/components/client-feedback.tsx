@@ -57,8 +57,11 @@ export function ClientFeedback() {
       id="client-feedback"
       aria-labelledby="client-feedback-title"
     >
-      <div className={`${styles.shell} ${styles.clientFeedbackGrid}`}>
-        <div className={styles.clientFeedbackCopy} data-reveal>
+      <div
+        className={`${styles.shell} ${styles.clientFeedbackGrid}`}
+        data-reveal="stagger"
+      >
+        <div className={styles.clientFeedbackCopy}>
           <p className={styles.eyebrow}>CLIENT</p>
           <h2
             className={styles.clientFeedbackHeading}
@@ -74,7 +77,6 @@ export function ClientFeedback() {
         <div
           className={styles.clientFeedbackTestimonials}
           aria-label="Client video testimonials"
-          data-reveal
         >
           {videoTestimonials.map((testimonial) => (
             <figure
@@ -107,6 +109,7 @@ export function ClientFeedback() {
       <div
         className={styles.feedbackMarquee}
         aria-label="Written client feedback"
+        data-reveal="scale"
       >
         <div className={styles.feedbackMarqueeTrack}>
           <ul className={styles.feedbackMarqueeGroup}>

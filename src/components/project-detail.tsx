@@ -204,13 +204,13 @@ function MoreProjects({ slug }: { slug: string }) {
 
   return (
     <section className={styles.more} aria-labelledby="more-projects">
-      <div className={styles.shell}>
+      <div className={styles.shell} data-reveal>
         <p className={styles.eyebrow}>More projects</p>
         <h2 className={styles.moreHeading} id="more-projects">
           Explore more work.
         </h2>
       </div>
-      <div className={styles.marquee}>
+      <div className={styles.marquee} data-reveal="left">
         <div className={styles.marqueeTrack}>
           {lane(false)}
           {lane(true)}
@@ -239,7 +239,7 @@ export function ProjectDetail({ project }: { project: Project }) {
       <div id="main-content" tabIndex={-1} data-menu-content>
         <article className={styles.detail}>
           <header className={styles.hero}>
-            <div className={styles.shell}>
+            <div className={styles.shell} data-reveal="stagger">
               {category ? (
                 <p className={styles.eyebrow}>{category.label}</p>
               ) : null}
@@ -250,7 +250,7 @@ export function ProjectDetail({ project }: { project: Project }) {
 
           <section className={styles.showcase}>
             <div className={styles.shell}>
-              <div className={styles.showcaseGrid}>
+              <div className={styles.showcaseGrid} data-reveal="stagger">
                 <Showcase project={project} />
                 <ProjectInfoPanel project={project} />
               </div>
@@ -259,7 +259,7 @@ export function ProjectDetail({ project }: { project: Project }) {
 
           {links.length > 0 ? (
             <section className={styles.cta}>
-              <div className={styles.shell}>
+              <div className={styles.shell} data-reveal="stagger">
                 {links.map((link) => (
                   <a
                     className={styles.ctaLink}
@@ -282,7 +282,7 @@ export function ProjectDetail({ project }: { project: Project }) {
           {project.overview ? (
             <section className={styles.section}>
               <div className={styles.shell}>
-                <div className={styles.splitGrid}>
+                <div className={styles.splitGrid} data-reveal="stagger">
                   <SectionHeading
                     index={number("overview")}
                     label="Overview"
@@ -300,7 +300,7 @@ export function ProjectDetail({ project }: { project: Project }) {
           {hasStory ? (
             <section className={styles.section}>
               <div className={styles.shell}>
-                <div className={styles.storyGrid}>
+                <div className={styles.storyGrid} data-reveal="stagger">
                   {project.challenge ? (
                     <div className={styles.story}>
                       <SectionHeading
@@ -338,7 +338,7 @@ export function ProjectDetail({ project }: { project: Project }) {
                   accent="Features"
                 />
                 {/* Titles only: the data carries no descriptions to show. */}
-                <ol className={styles.features}>
+                <ol className={styles.features} data-reveal="stagger">
                   {project.features.map((feature, index) => (
                     <li key={feature}>
                       <span className={styles.featureIndex} aria-hidden="true">

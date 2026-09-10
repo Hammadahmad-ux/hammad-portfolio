@@ -68,6 +68,7 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  animation: siteHeaderEnter 800ms 100ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .logo {
@@ -163,30 +164,108 @@ button:focus-visible {
   border-radius: 8px;
 }
 
-/* Entrance and scroll reveals. Transform is deliberately avoided on the hero,
-   whose composition already relies on its own transforms. */
-@keyframes heroEnter {
+/* Page-load motion is staged by content priority. Individual translate/scale
+   properties preserve the transforms used to compose the hero artwork. */
+@keyframes siteHeaderEnter {
   from {
     opacity: 0;
+    translate: 0 -18px;
   }
   to {
     opacity: 1;
+    translate: 0 0;
   }
 }
+@keyframes heroRise {
+  from {
+    opacity: 0;
+    translate: 0 30px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes heroLineReveal {
+  from {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+    translate: 0 38px;
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0);
+    translate: 0 0;
+  }
+}
+@keyframes heroPortraitEnter {
+  from {
+    opacity: 0;
+    scale: 0.96;
+    translate: 0 42px;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
+  }
+}
+
+/* Scroll reveals use one observer and CSS-only direction/stagger variants. */
 [data-reveal] {
   opacity: 0;
-  transform: translateY(26px);
+  transform: translateY(42px);
   transition:
-    opacity 900ms cubic-bezier(0.22, 0.61, 0.36, 1),
-    transform 900ms cubic-bezier(0.22, 0.61, 0.36, 1);
+    opacity 760ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+[data-reveal="left"] {
+  transform: translateX(-64px);
+}
+[data-reveal="right"] {
+  transform: translateX(64px);
+}
+[data-reveal="scale"] {
+  transform: scale(0.965);
 }
 [data-reveal][data-revealed] {
   opacity: 1;
   transform: none;
 }
+[data-reveal="stagger"] {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+[data-reveal="stagger"] > * {
+  opacity: 0;
+  transform: translateY(38px);
+  transition:
+    opacity 720ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+[data-reveal="stagger"][data-revealed] > * {
+  opacity: 1;
+  transform: none;
+}
+[data-reveal="stagger"][data-revealed] > :nth-child(2) {
+  transition-delay: 110ms;
+}
+[data-reveal="stagger"][data-revealed] > :nth-child(3) {
+  transition-delay: 220ms;
+}
+[data-reveal="stagger"][data-revealed] > :nth-child(4) {
+  transition-delay: 330ms;
+}
+[data-reveal="stagger"][data-revealed] > :nth-child(5) {
+  transition-delay: 440ms;
+}
+[data-reveal="stagger"][data-revealed] > :nth-child(6) {
+  transition-delay: 550ms;
+}
 
 .hero {
-  animation: heroEnter 1100ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
   --poster-height: clamp(690px, 53.87vw, 862px);
   --poster-offset: max(0px, (100svh - var(--poster-height)) / 2);
   --portrait-size: min(53vw, 800px);
@@ -209,6 +288,7 @@ button:focus-visible {
   line-height: 1.3;
   letter-spacing: -1px;
   color: #595957;
+  animation: heroRise 760ms 240ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 .intro-mark {
   display: inline-block;
@@ -243,11 +323,15 @@ button:focus-visible {
   transform: translateX(-50%) scaleX(0.99);
   transform-origin: center;
 }
+.headline-solid {
+  animation: heroLineReveal 1000ms 340ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
 .headline-outline {
   margin-top: 0.02em;
   color: transparent;
   -webkit-text-stroke: 1px #777775;
   transform: translateX(-50%) scaleX(0.8);
+  animation: heroLineReveal 1000ms 470ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 .location {
   position: absolute;
@@ -259,6 +343,7 @@ button:focus-visible {
   font-size: clamp(18px, 1.73vw, 27px);
   letter-spacing: -0.8px;
   line-height: 1.3;
+  animation: heroRise 800ms 720ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 .portrait {
   position: absolute;
@@ -270,6 +355,7 @@ button:focus-visible {
   transform: translateX(-50%);
   pointer-events: none;
   mask-image: linear-gradient(#000 0%, #000 72%, transparent 80%);
+  animation: heroPortraitEnter 1200ms 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 .portrait img {
   display: block;
@@ -287,6 +373,7 @@ button:focus-visible {
   display: flex;
   gap: 13px;
   transform: translateX(-50%);
+  animation: heroRise 800ms 860ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 .hero-actions .button:where(:first-child) {
   min-width: 149px;
@@ -307,6 +394,7 @@ button:focus-visible {
   mask: url("/assets/portrait-mask.svg") center
     calc(100% - var(--poster-offset) + var(--portrait-drop)) /
     var(--portrait-size) var(--portrait-size) no-repeat;
+  animation: heroRise 900ms 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 .headline-echo .headline-line {
   top: calc(var(--poster-offset) + var(--poster-height) * var(--headline-top));
@@ -564,10 +652,21 @@ button:focus-visible {
   .skip-link {
     transition: none;
   }
-  .hero {
+  .header,
+  .intro,
+  .headline-solid,
+  .headline-outline,
+  .location,
+  .portrait,
+  .hero-actions,
+  .headline-echo {
     animation: none;
   }
   [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  [data-reveal="stagger"] > * {
     opacity: 1 !important;
     transform: none !important;
   }

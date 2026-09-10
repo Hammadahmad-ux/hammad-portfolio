@@ -19,7 +19,7 @@ export function TechStack() {
         <div
           key={lane.id}
           className={`${styles.marquee}${index === 1 ? ` ${styles.marqueeReverse}` : ""}`}
-          data-reveal
+          data-reveal={index === 1 ? "right" : "left"}
         >
           <div className={styles.marqueeTrack}>
             <ul className={styles.marqueeGroup} aria-label={lane.label}>

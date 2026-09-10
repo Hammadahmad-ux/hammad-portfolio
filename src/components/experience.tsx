@@ -26,7 +26,7 @@ export function Experience() {
           Experience
         </h2>
         <ol className={styles.experienceList}>
-          <li className={styles.experienceRow} data-reveal>
+          <li className={styles.experienceRow} data-reveal="stagger">
             <div className={styles.experienceAside}>
               <Image
                 className={styles.experienceLogo}

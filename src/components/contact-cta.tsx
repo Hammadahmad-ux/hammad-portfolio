@@ -21,7 +21,7 @@ export function ContactCta() {
       data-header-dark
     >
       <div className={styles.shell}>
-        <div className={styles.contactGrid} data-reveal>
+        <div className={styles.contactGrid} data-reveal="stagger">
           <div className={styles.contactMain}>
             <p className={styles.eyebrow}>LET&apos;S MAKE SOMETHING GOOD.</p>
             <h2 className={styles.contactHeading} id="contact-title">
