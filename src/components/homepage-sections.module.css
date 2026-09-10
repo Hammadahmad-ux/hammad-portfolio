@@ -741,18 +741,18 @@ a.projectAction:hover svg {
 }
 
 .clientFeedback {
-  padding-block: clamp(82px, 8vw, 120px);
+  padding-block: clamp(82px, 8vw, 116px) clamp(70px, 7vw, 104px);
   border-top: 1px solid #deded9;
   background: #f5f5f1;
 }
 .clientFeedbackGrid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.72fr);
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
   align-items: start;
-  gap: clamp(56px, 7vw, 120px);
+  gap: clamp(48px, 5vw, 80px);
 }
 .clientFeedbackCopy {
-  padding-top: clamp(16px, 3vw, 48px);
+  padding-top: 10px;
 }
 .clientFeedbackHeading {
   margin: 0;
@@ -766,48 +766,28 @@ a.projectAction:hover svg {
   display: block;
 }
 .clientFeedbackIntro {
-  max-width: 34ch;
-  margin: clamp(28px, 3vw, 42px) 0 0;
+  max-width: 30ch;
+  margin: clamp(26px, 2.5vw, 36px) 0 0;
   color: #4f4f4a;
   font-size: clamp(14px, 1.15vw, 16px);
   line-height: 1.75;
 }
-.clientFeedbackProject {
-  max-width: 430px;
-  margin: clamp(42px, 5vw, 72px) 0 0;
-  border-top: 1px solid #cecec7;
-}
-.clientFeedbackProject > div {
+.clientFeedbackTestimonials {
   display: grid;
-  grid-template-columns: minmax(88px, 0.42fr) minmax(0, 1fr);
-  gap: 24px;
-  padding-block: 18px;
-  border-bottom: 1px solid #cecec7;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 280px));
+  gap: 28px 20px;
+  min-width: 0;
 }
-.clientFeedbackProject dt {
-  color: #777771;
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-.clientFeedbackProject dd {
+.clientFeedbackCard {
+  width: 100%;
   margin: 0;
-  color: #282825;
-  font-size: 14px;
-  line-height: 1.5;
-}
-.clientFeedbackMedia {
-  width: min(100%, 500px);
-  margin: 0;
-  justify-self: end;
+  scroll-snap-align: start;
 }
 .clientFeedbackFrame {
-  padding: clamp(7px, 0.7vw, 11px);
+  padding: 7px;
   overflow: hidden;
   border: 1px solid #3d3d38;
-  border-radius: 10px;
+  border-radius: 8px;
   background: #1b1b19;
 }
 .clientFeedbackVideo {
@@ -815,21 +795,104 @@ a.projectAction:hover svg {
   width: 100%;
   height: auto;
   aspect-ratio: 9 / 16;
-  border-radius: 4px;
+  border-radius: 3px;
   background: #000;
   object-fit: contain;
 }
-.clientFeedbackMedia figcaption {
+.clientFeedbackCard figcaption {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 18px;
-  margin-top: 15px;
+  gap: 5px;
+  margin-top: 14px;
   color: #686864;
   font-size: 10px;
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+.clientFeedbackCard figcaption span:first-child {
+  color: #282825;
+  font-size: 12px;
+}
+.feedbackMarquee {
+  margin-top: clamp(66px, 7vw, 100px);
+  overflow: hidden;
+  border-block: 1px solid #cecec7;
+}
+.feedbackMarqueeTrack {
+  display: flex;
+  width: max-content;
+  animation: feedbackMarqueeScroll 36s linear infinite;
+  will-change: transform;
+}
+.feedbackMarquee:is(:hover, :focus-within) .feedbackMarqueeTrack {
+  animation-play-state: paused;
+}
+.feedbackMarqueeGroup {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.feedbackMarqueeItem {
+  display: flex;
+  align-items: center;
+  min-height: 54px;
+  color: #3d3d39;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+}
+.feedbackMarqueeItem::after {
+  content: "\2726";
+  margin-inline: clamp(28px, 3.2vw, 54px);
+  color: #999991;
+  font-size: 9px;
+}
+@keyframes feedbackMarqueeScroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.feedbackCta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: clamp(42px, 4vw, 62px);
+  padding-bottom: 18px;
+  border-bottom: 1px solid #cecec7;
+}
+.feedbackCta p {
+  margin: 0;
+  color: #62625e;
+  font-size: 14px;
+}
+.feedbackCtaLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 44px;
+  padding-block: 8px;
+  color: #1b1b19;
+  font-size: clamp(18px, 1.8vw, 25px);
+  letter-spacing: -0.025em;
+}
+.feedbackCtaLink span {
+  transition: transform 300ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.feedbackCtaLink:is(:hover, :focus-visible) span {
+  transform: translateX(5px);
 }
 
 .techStack {
@@ -1188,7 +1251,7 @@ a.projectAction:hover svg {
     gap: 18px;
   }
   .clientFeedbackGrid {
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+    grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
     gap: 40px;
   }
 }
@@ -1200,10 +1263,19 @@ a.projectAction:hover svg {
   .clientFeedbackCopy {
     padding-top: 0;
   }
-  .clientFeedbackMedia {
-    width: min(100%, 460px);
+  .clientFeedbackTestimonials {
+    grid-auto-columns: min(78vw, 300px);
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    justify-content: start;
+    gap: 18px;
+    margin-right: calc((100vw - 100%) / -2);
     margin-top: 54px;
-    justify-self: auto;
+    padding-right: calc((100vw - 100%) / 2);
+    padding-bottom: 12px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
   }
 }
 
@@ -1416,20 +1488,33 @@ a.projectAction:hover svg {
     margin-top: 24px;
     font-size: 14px;
   }
-  .clientFeedbackProject {
-    margin-top: 34px;
+  .clientFeedbackTestimonials {
+    margin-top: 38px;
   }
-  .clientFeedbackProject > div {
-    grid-template-columns: 82px minmax(0, 1fr);
-    gap: 16px;
-    padding-block: 15px;
-  }
-  .clientFeedbackMedia {
-    margin-top: 42px;
-  }
-  .clientFeedbackMedia figcaption {
-    margin-top: 12px;
+  .clientFeedbackCard figcaption {
+    margin-top: 11px;
     font-size: 9px;
+  }
+  .feedbackMarquee {
+    margin-top: 52px;
+  }
+  .feedbackMarqueeItem {
+    min-height: 48px;
+    font-size: 10px;
+  }
+  .feedbackCta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 36px;
+    padding-bottom: 16px;
+  }
+  .feedbackCta p {
+    font-size: 13px;
+  }
+  .feedbackCtaLink {
+    gap: 16px;
+    font-size: 20px;
   }
   .techStack {
     padding-block: 64px 70px;
@@ -1577,6 +1662,23 @@ a.projectAction:hover svg {
     content: none;
   }
   .aboutCta:is(:hover, :focus-visible) svg {
+    transform: none;
+  }
+  .feedbackMarqueeTrack {
+    width: 100%;
+    animation: none;
+  }
+  .feedbackMarqueeGroup {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .feedbackMarqueeClone {
+    display: none;
+  }
+  .feedbackMarqueeItem:last-child::after {
+    content: none;
+  }
+  .feedbackCtaLink:is(:hover, :focus-visible) span {
     transform: none;
   }
 }
