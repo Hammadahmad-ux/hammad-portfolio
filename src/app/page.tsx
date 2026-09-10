@@ -6,6 +6,7 @@ import { SelectedWork } from "@/components/selected-work";
 import { Services } from "@/components/services";
 import { About } from "@/components/about";
 import { Experience } from "@/components/experience";
+import { ClientFeedback } from "@/components/client-feedback";
 import { TechStack } from "@/components/tech-stack";
 import { ContactCta } from "@/components/contact-cta";
 import sectionStyles from "@/components/homepage-sections.module.css";
@@ -97,6 +98,7 @@ export default function Home() {
           <Services />
           <About />
           <Experience />
+          <ClientFeedback />
           <TechStack />
           <ContactCta />
         </div>
