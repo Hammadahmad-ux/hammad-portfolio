@@ -847,13 +847,13 @@ a.projectAction:hover svg {
   flex-direction: column;
   align-items: flex-start;
   width: clamp(340px, 31vw, 440px);
-  min-height: 270px;
+  min-height: 340px;
   padding: 25px 27px 27px;
   border: 1px solid #c9c9c2;
   border-radius: 9px;
   background: #fafaf7;
   color: #3d3d39;
-  box-shadow: 0 16px 40px rgb(27 27 25 / 6%);
+  box-shadow: 0 18px 48px rgb(27 27 25 / 8%);
   white-space: normal;
 }
 .feedbackMarqueeItem:nth-child(odd) {
@@ -861,6 +861,10 @@ a.projectAction:hover svg {
 }
 .feedbackMarqueeItem:nth-child(even) {
   transform: translateY(8px);
+  border-color: #181816;
+  background: #181816;
+  color: #f7f7f2;
+  box-shadow: 0 22px 54px rgb(27 27 25 / 18%);
 }
 .feedbackMarqueeHeader {
   display: flex;
@@ -889,12 +893,69 @@ a.projectAction:hover svg {
 }
 .feedbackMarqueeQuote {
   display: block;
+  flex: 1;
   margin-top: 20px;
   color: #2f2f2c;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.62;
   letter-spacing: -0.015em;
+}
+.feedbackMarqueeAuthor {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #deded8;
+}
+.feedbackMarqueeMonogram {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: none;
+  place-items: center;
+  border-radius: 50%;
+  background: #181816;
+  color: #f7f7f2;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.feedbackMarqueeAuthorCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.feedbackMarqueeAuthorCopy strong {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.feedbackMarqueeAuthorCopy > span {
+  color: #85857e;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.feedbackMarqueeItem:nth-child(even) .feedbackMarqueeHeader,
+.feedbackMarqueeItem:nth-child(even) .feedbackMarqueeAuthor {
+  border-color: #3b3b37;
+}
+.feedbackMarqueeItem:nth-child(even) .feedbackMarqueeKicker,
+.feedbackMarqueeItem:nth-child(even) .feedbackMarqueeQuote,
+.feedbackMarqueeItem:nth-child(even) .feedbackMarqueeAuthorCopy strong {
+  color: #f7f7f2;
+}
+.feedbackMarqueeItem:nth-child(even) .feedbackMarqueeService,
+.feedbackMarqueeItem:nth-child(even) .feedbackMarqueeAuthorCopy > span {
+  color: #aaa9a1;
+}
+.feedbackMarqueeItem:nth-child(even) .feedbackMarqueeMonogram {
+  background: #f7f7f2;
+  color: #181816;
 }
 @keyframes feedbackMarqueeScroll {
   from {
@@ -1540,7 +1601,7 @@ a.projectAction:hover svg {
   }
   .feedbackMarqueeItem {
     width: min(82vw, 360px);
-    min-height: 286px;
+    min-height: 356px;
     padding: 22px 21px 24px;
   }
   .feedbackMarqueeKicker,
