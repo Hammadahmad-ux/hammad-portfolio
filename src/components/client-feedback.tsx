@@ -106,14 +106,19 @@ export function ClientFeedback() {
       >
         <div className={styles.feedbackMarqueeTrack}>
           <ul className={styles.feedbackMarqueeGroup}>
-            {writtenTestimonials.map((testimonial) => (
+            {writtenTestimonials.map((testimonial, index) => (
               <li
                 className={styles.feedbackMarqueeItem}
                 key={testimonial.service}
               >
-                <span className={styles.feedbackMarqueeService}>
-                  {testimonial.service}
-                </span>
+                <div className={styles.feedbackMarqueeHeader}>
+                  <span className={styles.feedbackMarqueeKicker}>
+                    Client Review / {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className={styles.feedbackMarqueeService}>
+                    {testimonial.service}
+                  </span>
+                </div>
                 <q className={styles.feedbackMarqueeQuote}>
                   {testimonial.feedback}
                 </q>
@@ -124,14 +129,19 @@ export function ClientFeedback() {
             className={`${styles.feedbackMarqueeGroup} ${styles.feedbackMarqueeClone}`}
             aria-hidden="true"
           >
-            {writtenTestimonials.map((testimonial) => (
+            {writtenTestimonials.map((testimonial, index) => (
               <li
                 className={styles.feedbackMarqueeItem}
                 key={testimonial.service}
               >
-                <span className={styles.feedbackMarqueeService}>
-                  {testimonial.service}
-                </span>
+                <div className={styles.feedbackMarqueeHeader}>
+                  <span className={styles.feedbackMarqueeKicker}>
+                    Client Review / {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className={styles.feedbackMarqueeService}>
+                    {testimonial.service}
+                  </span>
+                </div>
                 <q className={styles.feedbackMarqueeQuote}>
                   {testimonial.feedback}
                 </q>
