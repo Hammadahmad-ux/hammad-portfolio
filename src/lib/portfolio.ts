@@ -225,6 +225,38 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "mother-hubbards",
+    title: "Mother Hubbard's",
+    category: "web",
+    shortDescription:
+      "A British fish & chips restaurant website with a store locator.",
+    summary:
+      "A restaurant website for Mother Hubbard's, a British fish & chips brand serving since 1972.",
+    services: ["Website Design", "Web Development"],
+    capabilities: [
+      "Traditional British Brand",
+      "Modern & Appetizing Web Design",
+      "Store Locator Integration",
+      "Fully Responsive Experience",
+    ],
+    status: "Live",
+    overview:
+      "A website for Mother Hubbard's, a British fish & chips brand trading since 1972. The site carries the brand's traditional identity through a modern, appetizing design, with Home, Our Story, Gallery, Join Us, Testimonials and Contact Us sections plus a store locator so customers can find their nearest branch.",
+    features: [
+      "Store Locator",
+      "Gallery",
+      "Testimonials Section",
+      "Fully Responsive Design",
+    ],
+    liveUrl: "https://mother-hubbards.vercel.app/",
+    thumbnail: {
+      src: "/projects/mother-hubbards/thumbnail.webp",
+      alt: "Mother Hubbard's fish & chips website homepage on desktop and mobile.",
+      width: 1440,
+      height: 810,
+    },
+  },
+  {
     slug: "tourch-reliable-rides",
     title: "Tourch — Reliable Rides",
     category: "apps",
