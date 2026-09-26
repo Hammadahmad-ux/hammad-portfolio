@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/next";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { WhatsappFloat } from "@/components/whatsapp-float";
 import { siteUrl } from "@/lib/site-url";
 import "./globals.css";
 
@@ -81,6 +82,7 @@ export default function RootLayout({
           Skip to content
         </a>
         {children}
+        <WhatsappFloat />
         <ScrollReveal />
         {/* Vercel Web Analytics: page views only, no custom events. */}
         <Analytics />

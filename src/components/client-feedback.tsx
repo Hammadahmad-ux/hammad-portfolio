@@ -14,6 +14,11 @@ const videoTestimonials: VideoTestimonial[] = [
     engagement: "Website Redesign",
     video: "/testimonials/bovi-client-review.mp4",
   },
+  {
+    project: "Oasis House",
+    engagement: "Website Design",
+    video: "/testimonials/oasis-client-review.mp4",
+  },
 ];
 
 // Real written feedback supplied directly by the portfolio owner.

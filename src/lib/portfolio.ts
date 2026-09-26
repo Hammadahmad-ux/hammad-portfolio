@@ -216,52 +216,12 @@ export const projects: Project[] = [
       "Team & Vacancies Sections",
       "Responsive Accessibility-Focused Design",
     ],
+    liveUrl: "https://oasis-house.net/",
     thumbnail: {
       src: "/projects/oasis-house/thumbnail.webp",
       alt: "Oasis House project cover showing the children's residential care website on desktop and mobile.",
       width: 1440,
       height: 810,
-    },
-  },
-  {
-    slug: "apple-clone",
-    title: "Apple Clone",
-    category: "web",
-    shortDescription:
-      "A Django e-commerce web application built as an Apple store clone.",
-    summary:
-      "A full-stack Apple-inspired storefront built end to end in Django, covering the complete path from browsing a category to reviewing a past order.",
-    platform: ["Web"],
-    services: [
-      "Full-Stack Development",
-      "Data Model & Database",
-      "Admin Configuration",
-    ],
-    techStack: ["Django", "Python", "JavaScript", "SQLite"],
-    capabilities: [
-      "Catalogue & Search",
-      "Cart & Checkout",
-      "Order History",
-      "Reviews & Ratings",
-    ],
-    status: "Learning project",
-    overview:
-      "An Apple-inspired storefront built end to end in Django as a full-stack learning project. It covers the whole shopping path — browsing category pages for iPhone, Mac, iPad, Watch and the rest, searching with live suggestions, building a cart, checking out and returning to an order history — on top of Django's own authentication. Customers can leave ratings and reviews, and the Django admin panel handles catalogue and order management behind the scenes.",
-    features: [
-      "Product Catalogue & Category Browsing",
-      "Search with Suggestions",
-      "Shopping Cart",
-      "Checkout & Order History",
-      "User Authentication",
-      "Product Reviews & Ratings",
-    ],
-    githubUrl: "https://github.com/Hammadahmad-ux/Apple-clone-django-project",
-    thumbnail: {
-      src: "/projects/apple-clone/thumbnail.webp",
-      alt: "The Apple store clone homepage with its product navigation and iPhone hero.",
-      width: 1440,
-      height: 901,
-      fit: "contain",
     },
   },
   {

@@ -69,3 +69,6 @@ export const contactMethods: ContactMethod[] = [
 
 // Fastest direct route; used by the main CTA.
 export const whatsappHref = whatsapp.href;
+
+// UK WhatsApp number; used by the floating WhatsApp button.
+export const whatsappHrefUK = ukPhone.secondary!.href;
