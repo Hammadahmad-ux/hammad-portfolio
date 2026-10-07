@@ -968,6 +968,29 @@ a.projectAction:hover svg {
   letter-spacing: 0.13em;
   text-transform: uppercase;
 }
+.feedbackMarqueeSource {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #00b67a;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: transform 200ms ease;
+}
+.feedbackMarqueeSource:is(:hover, :focus-visible) {
+  transform: translateY(-1px);
+}
+.feedbackMarqueeSource svg {
+  width: 11px;
+  height: 11px;
+  fill: #fff;
+}
 .feedbackMarqueeItem:nth-child(even) .feedbackMarqueeHeader,
 .feedbackMarqueeItem:nth-child(even) .feedbackMarqueeAuthor {
   border-color: #3b3b37;
