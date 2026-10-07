@@ -68,6 +68,111 @@ export type Project = {
 // Each project supplies one cover at /projects/<slug>/thumbnail.webp.
 export const projects: Project[] = [
   {
+    slug: "mother-hubbards",
+    title: "Mother Hubbard's",
+    category: "web",
+    shortDescription:
+      "A British fish & chips restaurant website with a store locator.",
+    summary:
+      "A restaurant website for Mother Hubbard's, a British fish & chips brand serving since 1972.",
+    services: ["Website Design", "Web Development"],
+    capabilities: [
+      "Traditional British Brand",
+      "Modern & Appetizing Web Design",
+      "Store Locator Integration",
+      "Fully Responsive Experience",
+    ],
+    status: "Live",
+    overview:
+      "A website for Mother Hubbard's, a British fish & chips brand trading since 1972. The site carries the brand's traditional identity through a modern, appetizing design, with Home, Our Story, Gallery, Join Us, Testimonials and Contact Us sections plus a store locator so customers can find their nearest branch.",
+    features: [
+      "Store Locator",
+      "Gallery",
+      "Testimonials Section",
+      "Fully Responsive Design",
+    ],
+    liveUrl: "https://mother-hubbards.vercel.app/",
+    thumbnail: {
+      src: "/projects/mother-hubbards/thumbnail.webp",
+      alt: "Mother Hubbard's fish & chips website homepage on desktop and mobile.",
+      width: 1440,
+      height: 810,
+    },
+  },
+  {
+    slug: "alter-academy",
+    title: "Alter Academy",
+    category: "web",
+    shortDescription:
+      "A course and booking website for an auto locksmith training academy.",
+    summary:
+      "A training platform for a UK auto locksmith academy, built to explain each course clearly and turn visitors into booked students.",
+    services: ["Website Design", "Web Development"],
+    capabilities: [
+      "Course Platform",
+      "Course Booking",
+      "Responsive Design",
+      "Shop & Starter Bundle",
+    ],
+    status: "Live",
+    overview:
+      "Alter Academy runs hands-on auto locksmith training from its workshop in Buntingford, Hertfordshire. The website leads with the flagship 5 Day Auto Locksmith Course and a live countdown to the next intake, then lays out every course — the 5 day course, a 1 day taster and a 3 day one-to-one — with clear pricing and a direct “Book your place” route. Around the courses sit the academy's companion app, a tools shop and starter equipment bundle, student testimonials and video reviews, a workshop gallery, a blog, and student login and sign-up.",
+    features: [
+      "Course Pages & Booking Flow",
+      "Next-Course Countdown",
+      "Starter Bundle & Tools Shop",
+      "Companion App Showcase",
+      "Testimonials, Video Reviews & Gallery",
+      "Student Login & Sign-Up",
+    ],
+    liveUrl: "https://alteracademy.co/",
+    thumbnail: {
+      src: "/projects/alter-academy/thumbnail.webp",
+      alt: "Alter Academy auto locksmith training website shown on laptop and mobile.",
+      width: 1440,
+      height: 810,
+    },
+  },
+  {
+    slug: "bovi-access",
+    title: "BOVI Access",
+    category: "web",
+    shortDescription:
+      "A business website for rope access and external property maintenance.",
+    summary:
+      "A conversion-focused website for a commercial rope-access and external-maintenance contractor working across London and the South East.",
+    services: [
+      "Website Design",
+      "Responsive Build",
+      "SEO Setup",
+      "CMS Handover",
+    ],
+    techStack: ["Wix Studio"],
+    capabilities: [
+      "Service Showcase",
+      "Project Portfolio",
+      "Service Areas",
+      "Quote Enquiries",
+    ],
+    status: "Client project",
+    overview:
+      "BOVI Access is a commercial rope-access and external-maintenance contractor working on buildings across London and the South East, where winning work depends on reading as credible and being easy to reach. The website sets out the services, completed projects and covered service areas in a clear structure, and keeps a phone number and a Request a Quote action in the header at every scroll position. It was built on Wix Studio so the team can edit their own content after handover, with mobile optimisation and SEO setup included.",
+    features: [
+      "Rope Access Service Showcase",
+      "Projects & Work Presentation",
+      "Service Area Coverage",
+      "Persistent Quote & Call CTAs",
+      "Mobile-Optimised Responsive Build",
+      "Client-Editable Content & SEO Setup",
+    ],
+    thumbnail: {
+      src: "/projects/bovi-access/thumbnail.webp",
+      alt: "BOVI Access project cover showing the rope-access website on desktop and mobile.",
+      width: 1440,
+      height: 810,
+    },
+  },
+  {
     slug: "lockabea",
     title: "Lockabea",
     category: "web",
@@ -148,45 +253,6 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "bovi-access",
-    title: "BOVI Access",
-    category: "web",
-    shortDescription:
-      "A business website for rope access and external property maintenance.",
-    summary:
-      "A conversion-focused website for a commercial rope-access and external-maintenance contractor working across London and the South East.",
-    services: [
-      "Website Design",
-      "Responsive Build",
-      "SEO Setup",
-      "CMS Handover",
-    ],
-    techStack: ["Wix Studio"],
-    capabilities: [
-      "Service Showcase",
-      "Project Portfolio",
-      "Service Areas",
-      "Quote Enquiries",
-    ],
-    status: "Client project",
-    overview:
-      "BOVI Access is a commercial rope-access and external-maintenance contractor working on buildings across London and the South East, where winning work depends on reading as credible and being easy to reach. The website sets out the services, completed projects and covered service areas in a clear structure, and keeps a phone number and a Request a Quote action in the header at every scroll position. It was built on Wix Studio so the team can edit their own content after handover, with mobile optimisation and SEO setup included.",
-    features: [
-      "Rope Access Service Showcase",
-      "Projects & Work Presentation",
-      "Service Area Coverage",
-      "Persistent Quote & Call CTAs",
-      "Mobile-Optimised Responsive Build",
-      "Client-Editable Content & SEO Setup",
-    ],
-    thumbnail: {
-      src: "/projects/bovi-access/thumbnail.webp",
-      alt: "BOVI Access project cover showing the rope-access website on desktop and mobile.",
-      width: 1440,
-      height: 810,
-    },
-  },
-  {
     slug: "oasis-house",
     title: "Oasis House",
     category: "web",
@@ -220,72 +286,6 @@ export const projects: Project[] = [
     thumbnail: {
       src: "/projects/oasis-house/thumbnail.webp",
       alt: "Oasis House project cover showing the children's residential care website on desktop and mobile.",
-      width: 1440,
-      height: 810,
-    },
-  },
-  {
-    slug: "alter-academy",
-    title: "Alter Academy",
-    category: "web",
-    shortDescription:
-      "A course and booking website for an auto locksmith training academy.",
-    summary:
-      "A training platform for a UK auto locksmith academy, built to explain each course clearly and turn visitors into booked students.",
-    services: ["Website Design", "Web Development"],
-    capabilities: [
-      "Course Platform",
-      "Course Booking",
-      "Responsive Design",
-      "Shop & Starter Bundle",
-    ],
-    status: "Live",
-    overview:
-      "Alter Academy runs hands-on auto locksmith training from its workshop in Buntingford, Hertfordshire. The website leads with the flagship 5 Day Auto Locksmith Course and a live countdown to the next intake, then lays out every course — the 5 day course, a 1 day taster and a 3 day one-to-one — with clear pricing and a direct “Book your place” route. Around the courses sit the academy's companion app, a tools shop and starter equipment bundle, student testimonials and video reviews, a workshop gallery, a blog, and student login and sign-up.",
-    features: [
-      "Course Pages & Booking Flow",
-      "Next-Course Countdown",
-      "Starter Bundle & Tools Shop",
-      "Companion App Showcase",
-      "Testimonials, Video Reviews & Gallery",
-      "Student Login & Sign-Up",
-    ],
-    liveUrl: "https://alteracademy.co/",
-    thumbnail: {
-      src: "/projects/alter-academy/thumbnail.webp",
-      alt: "Alter Academy auto locksmith training website shown on laptop and mobile.",
-      width: 1440,
-      height: 810,
-    },
-  },
-  {
-    slug: "mother-hubbards",
-    title: "Mother Hubbard's",
-    category: "web",
-    shortDescription:
-      "A British fish & chips restaurant website with a store locator.",
-    summary:
-      "A restaurant website for Mother Hubbard's, a British fish & chips brand serving since 1972.",
-    services: ["Website Design", "Web Development"],
-    capabilities: [
-      "Traditional British Brand",
-      "Modern & Appetizing Web Design",
-      "Store Locator Integration",
-      "Fully Responsive Experience",
-    ],
-    status: "Live",
-    overview:
-      "A website for Mother Hubbard's, a British fish & chips brand trading since 1972. The site carries the brand's traditional identity through a modern, appetizing design, with Home, Our Story, Gallery, Join Us, Testimonials and Contact Us sections plus a store locator so customers can find their nearest branch.",
-    features: [
-      "Store Locator",
-      "Gallery",
-      "Testimonials Section",
-      "Fully Responsive Design",
-    ],
-    liveUrl: "https://mother-hubbards.vercel.app/",
-    thumbnail: {
-      src: "/projects/mother-hubbards/thumbnail.webp",
-      alt: "Mother Hubbard's fish & chips website homepage on desktop and mobile.",
       width: 1440,
       height: 810,
     },
