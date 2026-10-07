@@ -225,6 +225,40 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "alter-academy",
+    title: "Alter Academy",
+    category: "web",
+    shortDescription:
+      "A course and booking website for an auto locksmith training academy.",
+    summary:
+      "A training platform for a UK auto locksmith academy, built to explain each course clearly and turn visitors into booked students.",
+    services: ["Website Design", "Web Development"],
+    capabilities: [
+      "Course Platform",
+      "Course Booking",
+      "Responsive Design",
+      "Shop & Starter Bundle",
+    ],
+    status: "Live",
+    overview:
+      "Alter Academy runs hands-on auto locksmith training from its workshop in Buntingford, Hertfordshire. The website leads with the flagship 5 Day Auto Locksmith Course and a live countdown to the next intake, then lays out every course — the 5 day course, a 1 day taster and a 3 day one-to-one — with clear pricing and a direct “Book your place” route. Around the courses sit the academy's companion app, a tools shop and starter equipment bundle, student testimonials and video reviews, a workshop gallery, a blog, and student login and sign-up.",
+    features: [
+      "Course Pages & Booking Flow",
+      "Next-Course Countdown",
+      "Starter Bundle & Tools Shop",
+      "Companion App Showcase",
+      "Testimonials, Video Reviews & Gallery",
+      "Student Login & Sign-Up",
+    ],
+    liveUrl: "https://alteracademy.co/",
+    thumbnail: {
+      src: "/projects/alter-academy/thumbnail.webp",
+      alt: "Alter Academy auto locksmith training website shown on laptop and mobile.",
+      width: 1440,
+      height: 810,
+    },
+  },
+  {
     slug: "mother-hubbards",
     title: "Mother Hubbard's",
     category: "web",
