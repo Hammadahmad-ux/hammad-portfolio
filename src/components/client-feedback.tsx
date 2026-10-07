@@ -47,7 +47,21 @@ const writtenTestimonials = [
     feedback:
       "Great experience working with Hammad — everything was delivered properly and communication was solid.",
   },
+  {
+    name: "Renan Vieira",
+    service: "Website Development",
+    feedback:
+      "Hammad did a great job with my website. He was professional, responsive and very patient with all the changes and adjustments I requested. Communication was always easy, and I'm very happy with the final result. I'd definitely recommend him and would be happy to work with him again.",
+  },
+  {
+    name: "Wiggles Pizza",
+    service: "Website Support",
+    feedback:
+      "Excellent service from Hammad, easy to contact, very clear with his services, he's very responsive and patient. Our website was completely down, affecting our business — Hammad sorted this in less than 24hrs. Would definitely use again.",
+  },
 ];
+
+const trustpilotHref = "https://www.trustpilot.com/review/sadaworks.com";
 
 const emailHref =
   contactMethods.find((method) => method.id === "email")?.href ?? "#contact";
@@ -77,6 +91,20 @@ export function ClientFeedback() {
           <p className={styles.clientFeedbackIntro}>
             Real feedback from clients I&apos;ve worked with.
           </p>
+          <a
+            className={styles.trustpilotBadge}
+            href={trustpilotHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Read Hammad's reviews on Trustpilot"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2.5 14.7 10h7.9l-6.4 4.65L18.9 22 12 17.35 5.1 22l2.7-7.35L1.4 10h7.9Z" />
+            </svg>
+            <span>
+              <strong>Excellent</strong> on Trustpilot
+            </span>
+          </a>
         </div>
 
         <div
@@ -121,7 +149,7 @@ export function ClientFeedback() {
             {writtenTestimonials.map((testimonial, index) => (
               <li
                 className={styles.feedbackMarqueeItem}
-                key={testimonial.service}
+                key={testimonial.name}
               >
                 <div className={styles.feedbackMarqueeHeader}>
                   <span className={styles.feedbackMarqueeKicker}>
@@ -159,7 +187,7 @@ export function ClientFeedback() {
             {writtenTestimonials.map((testimonial, index) => (
               <li
                 className={styles.feedbackMarqueeItem}
-                key={testimonial.service}
+                key={testimonial.name}
               >
                 <div className={styles.feedbackMarqueeHeader}>
                   <span className={styles.feedbackMarqueeKicker}>

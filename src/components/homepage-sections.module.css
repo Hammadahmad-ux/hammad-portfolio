@@ -772,6 +772,34 @@ a.projectAction:hover svg {
   font-size: clamp(14px, 1.15vw, 16px);
   line-height: 1.75;
 }
+.trustpilotBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px 16px;
+  border: 1px solid #d7d7d1;
+  border-radius: 8px;
+  background: #fff;
+  color: #1b1b19;
+  font-size: 13px;
+  transition:
+    border-color 200ms ease,
+    transform 200ms ease;
+}
+.trustpilotBadge:is(:hover, :focus-visible) {
+  border-color: #00b67a;
+  transform: translateY(-1px);
+}
+.trustpilotBadge svg {
+  width: 20px;
+  height: 20px;
+  fill: #00b67a;
+  flex-shrink: 0;
+}
+.trustpilotBadge strong {
+  font-weight: 700;
+}
 .clientFeedbackTestimonials {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 280px));
