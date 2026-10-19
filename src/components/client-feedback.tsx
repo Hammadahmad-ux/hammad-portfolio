@@ -10,6 +10,11 @@ type VideoTestimonial = {
 
 const videoTestimonials: VideoTestimonial[] = [
   {
+    project: "Alter Academy",
+    engagement: "Website Design & Development",
+    video: "/testimonials/alter-academy-client-review.mp4",
+  },
+  {
     project: "BOVI Access",
     engagement: "Website Redesign",
     video: "/testimonials/bovi-client-review.mp4",
@@ -23,11 +28,6 @@ const videoTestimonials: VideoTestimonial[] = [
     project: "Wiggles Pizza",
     engagement: "Website Support",
     video: "/testimonials/wiggles-pizza-client-review.mp4",
-  },
-  {
-    project: "Alter Academy",
-    engagement: "Website Design & Development",
-    video: "/testimonials/alter-academy-client-review.mp4",
   },
 ];
 
