@@ -24,6 +24,11 @@ const videoTestimonials: VideoTestimonial[] = [
     engagement: "Website Support",
     video: "/testimonials/wiggles-pizza-client-review.mp4",
   },
+  {
+    project: "Alter Academy",
+    engagement: "Website Design & Development",
+    video: "/testimonials/alter-academy-client-review.mp4",
+  },
 ];
 
 // Real written feedback supplied directly by the portfolio owner.
