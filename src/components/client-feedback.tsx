@@ -13,21 +13,37 @@ const videoTestimonials: VideoTestimonial[] = [
     project: "Alter Academy",
     engagement: "Website Design & Development",
     video: "/testimonials/alter-academy-client-review.mp4",
+    poster: "/testimonials/alter-academy-client-review.jpg",
+  },
+  {
+    project: "Anna's Fitness App",
+    engagement: "Mobile App Development",
+    video: "/testimonials/anna-fitness-app-client-review.mp4",
+    poster: "/testimonials/anna-fitness-app-client-review.jpg",
+  },
+  {
+    project: "Instant Auto Shopper",
+    engagement: "AI & Automation",
+    video: "/testimonials/instant-auto-shopper-client-review.mp4",
+    poster: "/testimonials/instant-auto-shopper-client-review.jpg",
   },
   {
     project: "BOVI Access",
     engagement: "Website Redesign",
     video: "/testimonials/bovi-client-review.mp4",
+    poster: "/testimonials/bovi-client-review.jpg",
   },
   {
     project: "Oasis House",
     engagement: "Website Design",
     video: "/testimonials/oasis-client-review.mp4",
+    poster: "/testimonials/oasis-client-review.jpg",
   },
   {
     project: "Wiggles Pizza",
     engagement: "Website Support",
     video: "/testimonials/wiggles-pizza-client-review.mp4",
+    poster: "/testimonials/wiggles-pizza-client-review.jpg",
   },
 ];
 

@@ -410,6 +410,32 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "instant-auto-shopper",
+    title: "Instant Auto Shopper",
+    category: "automation",
+    shortDescription:
+      "A daily pricing-intelligence dashboard that tracks competitor car discounts.",
+    summary:
+      "An automation that reads nearby dealer websites every day and shows a car dealership where its discounts fall behind the competition.",
+    platform: ["Web dashboard"],
+    capabilities: [
+      "Daily Competitor Scans",
+      "Discount Gap Alerts",
+      "Vehicle Lookup",
+      "Daily Reports",
+    ],
+    overview:
+      "A pricing-intelligence dashboard for a car dealership. Every morning it reads the websites of competing dealers, compares their advertised discounts against the dealership's own across its vehicle range, and flags the cars where the gap is large enough to lose a sale. The team sees which vehicles need action first, which competitor is pushing hardest, and a trust panel showing when each dealer was last read and how many cars were captured.",
+    features: [
+      "Daily Dealer Website Scans",
+      "Discount Gap Alerts",
+      "Competitor Comparison",
+      "Vehicle Lookup",
+      "Daily Reports",
+      "Scan Trust Summary",
+    ],
+  },
+  {
     slug: "whatsapp-ai-agent",
     title: "WhatsApp AI Agent",
     category: "automation",

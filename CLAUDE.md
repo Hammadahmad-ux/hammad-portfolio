@@ -104,3 +104,8 @@ The homepage extension and category-first gallery are implemented. No deployment
 - Approved hero typography, image geometry, and CTA placement were compared before/after. `globals.css` and `portrait-mask.svg` remained unchanged. The longer page naturally adds a vertical scrollbar.
 - No unit/E2E test framework was added. Project links, dates, and final contact details remain user-supplied future content.
 - Dev preview: `http://127.0.0.1:3000`; recheck availability before starting another server.
+
+## Changelog (2026-11-19)
+
+- Added two client video reviews (Anna's Fitness App, Instant Auto Shopper) right after Alter Academy; added poster images for all 6 videos so iPhone Safari shows a frame instead of black. Names/thumbnails of the fitness app project still pending from Hammad.
+- Added Instant Auto Shopper to AI & Automation (no thumbnail yet; Hammad is making it via ChatGPT).
