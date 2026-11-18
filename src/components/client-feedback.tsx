@@ -16,10 +16,10 @@ const videoTestimonials: VideoTestimonial[] = [
     poster: "/testimonials/alter-academy-client-review.jpg",
   },
   {
-    project: "Anna's Fitness App",
-    engagement: "Mobile App Development",
-    video: "/testimonials/anna-fitness-app-client-review.mp4",
-    poster: "/testimonials/anna-fitness-app-client-review.jpg",
+    project: "Everfit",
+    engagement: "App Integration",
+    video: "/testimonials/everfit-client-review.mp4",
+    poster: "/testimonials/everfit-client-review.jpg",
   },
   {
     project: "Instant Auto Shopper",

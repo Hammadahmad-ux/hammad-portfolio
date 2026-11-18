@@ -107,5 +107,5 @@ The homepage extension and category-first gallery are implemented. No deployment
 
 ## Changelog (2026-11-19)
 
-- Added two client video reviews (Anna's Fitness App, Instant Auto Shopper) right after Alter Academy; added poster images for all 6 videos so iPhone Safari shows a frame instead of black. Names/thumbnails of the fitness app project still pending from Hammad.
+- Added two client video reviews (Everfit, Instant Auto Shopper) right after Alter Academy; added poster images for all 6 videos so iPhone Safari shows a frame instead of black. Everfit (integration work) is a video review only; no Apps project entry.
 - Added Instant Auto Shopper to AI & Automation (no thumbnail yet; Hammad is making it via ChatGPT).
