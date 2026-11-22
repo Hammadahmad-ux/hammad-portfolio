@@ -434,6 +434,12 @@ export const projects: Project[] = [
       "Daily Reports",
       "Scan Trust Summary",
     ],
+    thumbnail: {
+      src: "/projects/instant-auto-shopper/thumbnail.webp",
+      alt: "Instant Auto Shopper project cover showing the pricing-intelligence dashboard on laptop and mobile.",
+      width: 1440,
+      height: 810,
+    },
   },
   {
     slug: "whatsapp-ai-agent",
