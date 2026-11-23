@@ -80,6 +80,19 @@ const writtenTestimonials = [
   },
 ];
 
+// Few reviews: repeat them inside each marquee group so the track is always
+// wider than the screen and never shows an empty gap. Only the first pass is
+// exposed to assistive tech.
+const MARQUEE_REPEATS = 4;
+const marqueeItems = Array.from(
+  { length: MARQUEE_REPEATS * writtenTestimonials.length },
+  (_, position) => ({
+    testimonial: writtenTestimonials[position % writtenTestimonials.length],
+    index: position % writtenTestimonials.length,
+    position,
+  }),
+);
+
 const trustpilotHref = "https://www.trustpilot.com/review/sadaworks.com";
 
 function TrustpilotMark() {
@@ -93,12 +106,17 @@ function TrustpilotMark() {
 function TestimonialItem({
   testimonial,
   index,
+  decorative = false,
 }: {
   testimonial: (typeof writtenTestimonials)[number];
   index: number;
+  decorative?: boolean;
 }) {
   return (
-    <li className={styles.feedbackMarqueeItem}>
+    <li
+      className={styles.feedbackMarqueeItem}
+      {...(decorative ? { "aria-hidden": true } : {})}
+    >
       <div className={styles.feedbackMarqueeHeader}>
         <span className={styles.feedbackMarqueeKicker}>
           Client Review / {String(index + 1).padStart(2, "0")}
@@ -226,11 +244,12 @@ export function ClientFeedback() {
       >
         <div className={styles.feedbackMarqueeTrack}>
           <ul className={styles.feedbackMarqueeGroup}>
-            {writtenTestimonials.map((testimonial, index) => (
+            {marqueeItems.map(({ testimonial, index, position }) => (
               <TestimonialItem
-                key={testimonial.name}
+                key={position}
                 testimonial={testimonial}
                 index={index}
+                decorative={position >= writtenTestimonials.length}
               />
             ))}
           </ul>
@@ -238,9 +257,9 @@ export function ClientFeedback() {
             className={`${styles.feedbackMarqueeGroup} ${styles.feedbackMarqueeClone}`}
             aria-hidden="true"
           >
-            {writtenTestimonials.map((testimonial, index) => (
+            {marqueeItems.map(({ testimonial, index, position }) => (
               <TestimonialItem
-                key={testimonial.name}
+                key={position}
                 testimonial={testimonial}
                 index={index}
               />

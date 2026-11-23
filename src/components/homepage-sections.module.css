@@ -896,7 +896,7 @@ a.projectAction:hover svg {
   display: flex;
   flex: none;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 24px;
   min-width: 100vw;
   margin: 0;
