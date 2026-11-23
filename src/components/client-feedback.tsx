@@ -65,30 +65,6 @@ const videoTestimonials: VideoTestimonial[] = [
 // Real written feedback supplied directly by the portfolio owner.
 const writtenTestimonials = [
   {
-    name: "Daniel Roberts",
-    service: "Website Development",
-    feedback:
-      "Hammad was really easy to work with and understood what I wanted without too much back and forth. The final website looked clean, professional, and worked perfectly on mobile too.",
-  },
-  {
-    name: "Sophie Bennett",
-    service: "AI Automation",
-    feedback:
-      "Really happy with the result. Hammad was quick, responsive, and made the whole process easy.",
-  },
-  {
-    name: "James Carter",
-    service: "Website Redesign",
-    feedback:
-      "Our old website needed a proper refresh and Hammad handled it really well. He gave useful suggestions, made the changes quickly, and the new version feels much more professional.",
-  },
-  {
-    name: "Olivia Thompson",
-    service: "Custom Software Project",
-    feedback:
-      "Great experience working with Hammad — everything was delivered properly and communication was solid.",
-  },
-  {
     name: "Renan Borges Vieira",
     service: "Website Development",
     feedback:

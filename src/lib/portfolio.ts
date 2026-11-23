@@ -181,46 +181,6 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "onyx-barbers",
-    title: "Onyx Barbers",
-    category: "web",
-    shortDescription:
-      "An editorial barbershop website built around grooming and booking.",
-    summary:
-      "A dark editorial website for a Manchester barbershop, covering the brand, a priced service menu, the team and the route into online booking.",
-    services: [
-      "Website Design",
-      "Frontend Development",
-      "Booking & Contact Journey",
-    ],
-    techStack: ["Next.js", "React", "Vercel"],
-    capabilities: [
-      "Service Pricing",
-      "Online Booking",
-      "Gallery",
-      "Enquiry Form",
-    ],
-    status: "Live",
-    overview:
-      "Onyx Barbers is a Manchester barbershop that needed its website to do the job of a shopfront: show the standard of the work, publish prices openly and get people into the booking system. The result is a dark editorial page that runs from the shop's introduction through a priced menu of eight cuts and grooming services, profiles of the four barbers and a gallery of finished work, with booking calls-to-action repeated at every scroll depth. Opening hours, the Manchester address and a contact form close the page, and booking hands off to the shop's own online booking page.",
-    features: [
-      "Responsive Editorial Design",
-      "Priced Services Menu",
-      "Online Booking Journey",
-      "Barber Team Profiles",
-      "Work Gallery",
-      "Contact, Hours & Location",
-    ],
-    liveUrl: "https://onyx-barbers-two.vercel.app/",
-    // Observed on the live site; nothing here is inferred.
-    thumbnail: {
-      src: "/projects/onyx-barbers/thumbnail.webp",
-      alt: "Onyx Barbers project cover showing the website on desktop and mobile.",
-      width: 1440,
-      height: 810,
-    },
-  },
-  {
     slug: "oasis-house",
     title: "Oasis House",
     category: "web",

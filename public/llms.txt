@@ -30,7 +30,6 @@
 - [Alter Academy](https://hammadahmad.dev/projects/alter-academy): A course and booking website for an auto locksmith training academy. Live site: https://alteracademy.co/ Status: Live.
 - [BOVI Access](https://hammadahmad.dev/projects/bovi-access): A business website for rope access and external property maintenance. Status: Client project.
 - [Lockabea](https://hammadahmad.dev/projects/lockabea): A product-led storefront for a personal-security smartwatch. Live site: https://www.lockabea.com/ Status: Live.
-- [Onyx Barbers](https://hammadahmad.dev/projects/onyx-barbers): An editorial barbershop website built around grooming and booking. Live site: https://onyx-barbers-two.vercel.app/ Status: Live.
 - [Oasis House](https://hammadahmad.dev/projects/oasis-house): A care-focused website for children's residential services. Live site: https://oasis-house.net/ Status: Client project.
 
 ## Projects: Apps

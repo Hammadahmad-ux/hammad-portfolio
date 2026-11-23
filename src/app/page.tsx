@@ -7,6 +7,7 @@ import { Services } from "@/components/services";
 import { About } from "@/components/about";
 import { Experience } from "@/components/experience";
 import { ClientFeedback } from "@/components/client-feedback";
+import { VerifyWork } from "@/components/verify-work";
 import { TechStack } from "@/components/tech-stack";
 import { ContactCta } from "@/components/contact-cta";
 import sectionStyles from "@/components/homepage-sections.module.css";
@@ -118,6 +119,7 @@ export default function Home() {
           <About />
           <Experience />
           <ClientFeedback />
+          <VerifyWork />
           <TechStack />
           <ContactCta />
         </div>

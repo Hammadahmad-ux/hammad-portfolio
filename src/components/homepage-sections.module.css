@@ -733,6 +733,19 @@ a.projectAction:hover svg {
   font-size: 13px;
   line-height: 1.6;
 }
+.verifySummary {
+  max-width: 720px;
+  margin: 28px 0 0;
+  color: #3c3c38;
+  font-size: 17px;
+  line-height: 1.7;
+}
+.verifyLink {
+  color: #282825;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 .experienceHighlights li::before {
   content: "";
   position: absolute;
