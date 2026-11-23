@@ -62,6 +62,24 @@ const videoTestimonials: VideoTestimonial[] = [
   },
 ];
 
+// Real written feedback supplied directly by the portfolio owner.
+const writtenTestimonials = [
+  {
+    name: "Renan Borges Vieira",
+    service: "Website Development",
+    feedback:
+      "Hammad did a great job with my website. He was professional, responsive and very patient with all the changes and adjustments I requested. Communication was always easy, and I'm very happy with the final result. I'd definitely recommend him and would be happy to work with him again.",
+    sourceUrl: "https://www.trustpilot.com/review/sadaworks.com",
+  },
+  {
+    name: "Wiggles Pizza",
+    service: "Website Support",
+    feedback:
+      "Excellent service from Hammad, easy to contact, very clear with his services, he's very responsive and patient. Our website was completely down, affecting our business — Hammad sorted this in less than 24hrs. Would definitely use again.",
+    sourceUrl: "https://www.trustpilot.com/review/sadaworks.com",
+  },
+];
+
 const trustpilotHref = "https://www.trustpilot.com/review/sadaworks.com";
 
 function TrustpilotMark() {
@@ -69,6 +87,52 @@ function TrustpilotMark() {
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path d="M12 2.5 14.7 10h7.9l-6.4 4.65L18.9 22 12 17.35 5.1 22l2.7-7.35L1.4 10h7.9Z" />
     </svg>
+  );
+}
+
+function TestimonialItem({
+  testimonial,
+  index,
+}: {
+  testimonial: (typeof writtenTestimonials)[number];
+  index: number;
+}) {
+  return (
+    <li className={styles.feedbackMarqueeItem}>
+      <div className={styles.feedbackMarqueeHeader}>
+        <span className={styles.feedbackMarqueeKicker}>
+          Client Review / {String(index + 1).padStart(2, "0")}
+        </span>
+        <span className={styles.feedbackMarqueeService}>
+          {testimonial.service}
+        </span>
+      </div>
+      <q className={styles.feedbackMarqueeQuote}>{testimonial.feedback}</q>
+      <div className={styles.feedbackMarqueeAuthor}>
+        <span className={styles.feedbackMarqueeMonogram} aria-hidden="true">
+          {testimonial.name
+            .split(" ")
+            .map((part) => part[0])
+            .join("")}
+        </span>
+        <span className={styles.feedbackMarqueeAuthorCopy}>
+          <strong>{testimonial.name}</strong>
+          <span>Client</span>
+        </span>
+        {testimonial.sourceUrl && (
+          <a
+            className={styles.feedbackMarqueeSource}
+            href={testimonial.sourceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Read ${testimonial.name}'s review on Trustpilot`}
+          >
+            <TrustpilotMark />
+            Trustpilot
+          </a>
+        )}
+      </div>
+    </li>
   );
 }
 
@@ -152,6 +216,36 @@ export function ClientFeedback() {
               )}
             </figure>
           ))}
+        </div>
+      </div>
+
+      <div
+        className={styles.feedbackMarquee}
+        aria-label="Written client feedback"
+        data-reveal="scale"
+      >
+        <div className={styles.feedbackMarqueeTrack}>
+          <ul className={styles.feedbackMarqueeGroup}>
+            {writtenTestimonials.map((testimonial, index) => (
+              <TestimonialItem
+                key={testimonial.name}
+                testimonial={testimonial}
+                index={index}
+              />
+            ))}
+          </ul>
+          <ul
+            className={`${styles.feedbackMarqueeGroup} ${styles.feedbackMarqueeClone}`}
+            aria-hidden="true"
+          >
+            {writtenTestimonials.map((testimonial, index) => (
+              <TestimonialItem
+                key={testimonial.name}
+                testimonial={testimonial}
+                index={index}
+              />
+            ))}
+          </ul>
         </div>
       </div>
 
