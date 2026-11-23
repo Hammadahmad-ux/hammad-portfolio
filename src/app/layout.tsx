@@ -13,14 +13,14 @@ const anton = localFont({
   weight: "400",
 });
 
-const title = "Hammad — Full Stack Developer & Automation Expert";
+const title = "Hammad Ahmad — Full Stack Developer & Automation Expert";
 const description =
-  "Hammad is a Full Stack Developer and Automation Expert building modern websites, web applications, mobile products and AI-powered automation systems.";
+  "Hammad Ahmad is a freelance Full Stack Developer and Automation Expert building modern websites, web applications, mobile products and AI-powered automation systems.";
 
 export const metadata: Metadata = {
   // Absolute URLs are only emitted once a production origin is configured.
   ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
-  title: { default: title, template: "%s | Hammad" },
+  title: { default: title, template: "%s | Hammad Ahmad" },
   description,
   applicationName: "Hammad",
   authors: [{ name: "Hammad Ahmad" }],
@@ -49,10 +49,17 @@ export const metadata: Metadata = {
     },
   },
   icons: { icon: "/assets/favicon.svg" },
-  ...(siteUrl ? { alternates: { canonical: "/" } } : {}),
+  ...(siteUrl
+    ? {
+        alternates: {
+          canonical: "/",
+          types: { "text/plain": "/llms.txt" },
+        },
+      }
+    : {}),
   openGraph: {
     type: "website",
-    siteName: "Hammad",
+    siteName: "Hammad Ahmad",
     title,
     description,
     locale: "en_US",

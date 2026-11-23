@@ -231,6 +231,7 @@ export function ProjectDetail({ project }: { project: Project }) {
   if (project.challenge) order.push("challenge");
   if (project.solution) order.push("solution");
   if (project.features?.length) order.push("features");
+  if (project.clientReview) order.push("review");
   const number = (key: string) => pad(order.indexOf(key));
 
   return (
@@ -348,6 +349,33 @@ export function ProjectDetail({ project }: { project: Project }) {
                     </li>
                   ))}
                 </ol>
+              </div>
+            </section>
+          ) : null}
+
+          {project.clientReview ? (
+            <section className={styles.section}>
+              <div className={styles.shell}>
+                <div className={styles.splitGrid} data-reveal="stagger">
+                  <SectionHeading
+                    index={number("review")}
+                    label="Client review"
+                    lead="Client"
+                    accent="Review"
+                  />
+                  <figure className={styles.splitBody}>
+                    <blockquote className={styles.bodyLead}>
+                      “{project.clientReview.quote}”
+                    </blockquote>
+                    <figcaption className={styles.body}>
+                      {project.clientReview.name},{" "}
+                      {project.clientReview.company} ·{" "}
+                      <Link href="/#client-feedback">
+                        Watch the video review
+                      </Link>
+                    </figcaption>
+                  </figure>
+                </div>
               </div>
             </section>
           ) : null}

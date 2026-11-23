@@ -58,6 +58,9 @@ export type Project = {
 
   thumbnail?: ProjectImage;
 
+  // Verbatim excerpt from the client's filmed review (sadaworks.com/testimonials).
+  clientReview?: { name: string; company: string; quote: string };
+
   // Real captures of a live site: the desktop view is the card's default and
   // the mobile view is revealed on hover. Both must exist to pair up.
   desktopImage?: ProjectImage;
@@ -94,6 +97,12 @@ export const projects: Project[] = [
       "Student Login & Sign-Up",
     ],
     liveUrl: "https://alteracademy.co/",
+    clientReview: {
+      name: "Tyler Steadman",
+      company: "Alter Academy · Access Denied",
+      quote:
+        "Hammad has done an exceptional job laying out this website, so honestly guys, I've generally worked with a lot of website developers in the past, Hammad is now taking on various projects that we are giving to him and he's doing exceptionally well.",
+    },
     thumbnail: {
       src: "/projects/alter-academy/thumbnail.webp",
       alt: "Alter Academy auto locksmith training website shown on laptop and mobile.",
@@ -133,6 +142,13 @@ export const projects: Project[] = [
       "Mobile-Optimised Responsive Build",
       "Client-Editable Content & SEO Setup",
     ],
+    liveUrl: "https://boviaccess.co.uk/",
+    clientReview: {
+      name: "Renan Borges Vieira",
+      company: "BOVI Access",
+      quote:
+        "Hammad Ahmed did a great job on my new website. I'm very happy with the result. It was always helpful and easy to work with. I really recommend him.",
+    },
     thumbnail: {
       src: "/projects/bovi-access/thumbnail.webp",
       alt: "BOVI Access project cover showing the rope-access website on desktop and mobile.",
@@ -211,6 +227,12 @@ export const projects: Project[] = [
       "Responsive Accessibility-Focused Design",
     ],
     liveUrl: "https://oasis-house.net/",
+    clientReview: {
+      name: "Margaret Firth",
+      company: "Oasis House",
+      quote:
+        "You've been amazing. You've been very patient. Your professionalism speaks volumes, and I would not hesitate using your company and services again.",
+    },
     thumbnail: {
       src: "/projects/oasis-house/thumbnail.webp",
       alt: "Oasis House project cover showing the children's residential care website on desktop and mobile.",

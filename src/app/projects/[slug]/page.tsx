@@ -11,7 +11,7 @@ const FALLBACK_OG_IMAGE = {
   url: "/opengraph-image",
   width: 1200,
   height: 630,
-  alt: "Hammad — Full Stack Developer & Automation Expert",
+  alt: "Hammad Ahmad — Full Stack Developer & Automation Expert",
 };
 
 export function generateStaticParams() {
@@ -28,7 +28,7 @@ export async function generateMetadata({
   // Derived from project data only; nothing is written on the project's behalf.
   const canonical = `/projects/${project.slug}`;
   const image = project.desktopImage ?? project.thumbnail;
-  const description = project.shortDescription;
+  const description = `${project.shortDescription} Built by Hammad Ahmad.`;
   const images = image
     ? [
         {
@@ -46,7 +46,7 @@ export async function generateMetadata({
     ...(siteUrl ? { alternates: { canonical } } : {}),
     openGraph: {
       type: "article",
-      siteName: "Hammad",
+      siteName: "Hammad Ahmad",
       title: project.title,
       description,
       ...(siteUrl ? { url: canonical } : {}),
@@ -66,5 +66,41 @@ export default async function ProjectPage({ params }: PageProps) {
   const project = getProject(slug);
   if (!project) notFound();
 
-  return <ProjectDetail project={project} />;
+  // Ties each project to the same Person entity the homepage declares.
+  const links = [
+    project.liveUrl,
+    ...(project.links ?? []).map((link) => link.href),
+  ].filter(Boolean);
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: project.title,
+    description: project.summary ?? project.shortDescription,
+    ...(siteUrl ? { url: `${siteUrl}/projects/${project.slug}` } : {}),
+    ...(links.length > 0 ? { sameAs: links } : {}),
+    creator: {
+      "@type": "Person",
+      ...(siteUrl ? { "@id": `${siteUrl}/#person` } : {}),
+      name: "Hammad Ahmad",
+    },
+    ...(project.clientReview
+      ? {
+          review: {
+            "@type": "Review",
+            reviewBody: project.clientReview.quote,
+            author: { "@type": "Person", name: project.clientReview.name },
+          },
+        }
+      : {}),
+  };
+
+  return (
+    <>
+      <ProjectDetail project={project} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+    </>
+  );
 }
