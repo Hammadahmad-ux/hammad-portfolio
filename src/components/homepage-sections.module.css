@@ -68,6 +68,9 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 32px;
 }
+.projectGrid[hidden] {
+  display: none;
+}
 .project {
   min-width: 0;
 }
@@ -843,6 +846,23 @@ a.projectAction:hover svg {
 .clientFeedbackCard figcaption span:first-child {
   color: #282825;
   font-size: 12px;
+}
+.clientFeedbackTranscript {
+  margin-top: 10px;
+  color: #686864;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.clientFeedbackTranscript summary {
+  cursor: pointer;
+  color: #282825;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.clientFeedbackTranscript p {
+  margin-top: 8px;
 }
 .feedbackMarquee {
   margin-top: clamp(66px, 7vw, 100px);

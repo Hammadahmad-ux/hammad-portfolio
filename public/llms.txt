@@ -1,0 +1,46 @@
+# Hammad Ahmad — Full Stack Developer & Automation Expert
+
+> Hammad Ahmad is a freelance full stack developer and AI automation builder working with clients worldwide (UK, US and beyond) through SadaWorks (https://sadaworks.com). He builds websites, web and mobile apps, and AI automation systems, from requirements through deployment and support.
+
+## Who
+- Name: Hammad Ahmad
+- Role: Full-Stack Developer & AI Automation Builder at SadaWorks (since March 2024)
+- Studio: SadaWorks — https://sadaworks.com
+- Public reviews: https://www.trustpilot.com/review/sadaworks.com
+- Client video reviews with transcripts: https://hammadahmad.dev/#client-feedback and https://sadaworks.com/testimonials
+- Code: https://github.com/hammadahmad-ux
+- Contact: hammad@sadaworks.com · WhatsApp +92 306 4233117 · UK +44 7882 764331
+
+## Services
+- Web design and development
+- Full stack web applications
+- Mobile apps (Flutter, React Native)
+- AI agents, AI voice agents and workflow automation (n8n, Claude API, Gemini API)
+- E-commerce (Shopify and custom)
+
+## Named client video reviews
+- Tyler Steadman, Alter Academy / Access Denied — website design and development (alteracademy.co)
+- Renan Borges Vieira, BOVI Access — website redesign (boviaccess.co.uk)
+- Margaret Firth, Oasis House — website design (oasis-house.net)
+- Stephanie Cameron, Wiggles Pizza — emergency website support, site restored within 24 hours
+- Everfit — app integration
+- Instant Auto Shopper — AI pricing-intelligence automation
+
+## Projects: Web Design & Development
+- [Alter Academy](https://hammadahmad.dev/projects/alter-academy): A course and booking website for an auto locksmith training academy. Live site: https://alteracademy.co/ Status: Live.
+- [BOVI Access](https://hammadahmad.dev/projects/bovi-access): A business website for rope access and external property maintenance. Status: Client project.
+- [Lockabea](https://hammadahmad.dev/projects/lockabea): A product-led storefront for a personal-security smartwatch. Live site: https://www.lockabea.com/ Status: Live.
+- [Onyx Barbers](https://hammadahmad.dev/projects/onyx-barbers): An editorial barbershop website built around grooming and booking. Live site: https://onyx-barbers-two.vercel.app/ Status: Live.
+- [Oasis House](https://hammadahmad.dev/projects/oasis-house): A care-focused website for children's residential services. Live site: https://oasis-house.net/ Status: Client project.
+
+## Projects: Apps
+- [Tourch — Reliable Rides](https://hammadahmad.dev/projects/tourch-reliable-rides): A ride-hailing app with booking, live tracking and trip-sharing features. Status: Released on App Store & Google Play.
+- [SSP Statify](https://hammadahmad.dev/projects/ssp-statify): A tournament operations platform for competitive PUBG Mobile.
+- [Cricket Analytics SaaS Platform](https://hammadahmad.dev/projects/cricket-analytics): A SaaS project for cricket data, performance analysis and insights.
+- [NutriPak](https://hammadahmad.dev/projects/nutripak): A nutrition app combining Pakistani food logging and AI-assisted meal planning. Status: In development.
+
+## Projects: AI & Automation
+- [Instant Auto Shopper](https://hammadahmad.dev/projects/instant-auto-shopper): A daily pricing-intelligence dashboard that tracks competitor car discounts.
+- [WhatsApp AI Agent](https://hammadahmad.dev/projects/whatsapp-ai-agent): Conversational automation for WhatsApp enquiries and lead capture.
+- [Home Services AI Dispatcher](https://hammadahmad.dev/projects/home-services-ai-dispatcher): A voice-agent and dispatch workflow for home-service enquiries.
+- [Real Estate Speed-to-Lead / CRM Dashboard](https://hammadahmad.dev/projects/real-estate-speed-to-lead): A CRM dashboard and response workflow for real estate leads.

@@ -256,19 +256,27 @@ export function ProjectGallery() {
         {projectCategories.find((item) => item.id === category)?.label}: showing{" "}
         {categoryProjects.length} projects.
       </p>
-      <div
-        className={styles.projectGrid}
-        id="project-results"
-        data-reveal="stagger"
-      >
-        {categoryProjects.map((project, index) => (
-          <ProjectItem
-            key={project.slug}
-            project={project}
-            number={index + 1}
-          />
-        ))}
-      </div>
+      {/* Every category is in the HTML so readers without JS (search and AI
+          crawlers) see all projects; only the chosen one is shown. */}
+      {projectCategories.map((item) => (
+        <div
+          key={item.id}
+          className={styles.projectGrid}
+          id={item.id === category ? "project-results" : undefined}
+          hidden={item.id !== category}
+          data-reveal="stagger"
+        >
+          {projects
+            .filter((project) => project.category === item.id)
+            .map((project, index) => (
+              <ProjectItem
+                key={project.slug}
+                project={project}
+                number={index + 1}
+              />
+            ))}
+        </div>
+      ))}
       {categoryProjects.length === 0 && (
         <p className={styles.sectionIntro}>
           Projects in this category will be added soon.

@@ -6,6 +6,9 @@ type VideoTestimonial = {
   engagement: string;
   video: string;
   poster?: string;
+  // Name and transcript as published on sadaworks.com/testimonials.
+  client?: string;
+  transcript?: string;
 };
 
 const videoTestimonials: VideoTestimonial[] = [
@@ -14,6 +17,9 @@ const videoTestimonials: VideoTestimonial[] = [
     engagement: "Website Design & Development",
     video: "/testimonials/alter-academy-client-review.mp4",
     poster: "/testimonials/alter-academy-client-review.jpg",
+    client: "Tyler Steadman",
+    transcript:
+      "This is a quick video to let you know if you are looking for a web developer, someone to take on your projects, build an app, website, shop, etc. Look no further, Hammad from SadaWorks is your man. I'm Tyler from Alter Academy and Access Denied. I currently had a full-time web developer that was working for us on this project. The item that we are selling is a high-ticket item and does need to be quite formal. As you'll see that our old website is very informal, information is scattered. I let him go, I actually stumbled across Hammad from SadaWorks and we actually built this new website here. This has lots of information on it, easy to navigate, it has a very very good call to action and it's just easy to digest information from. With this being a high-ticket item, we need it to be formal, we need customers to know exactly what they're purchasing and we can just show them the outcome afterwards. Hammad has done an exceptional job laying out this website, so honestly guys, I've generally worked with a lot of website developers in the past, Hammad is now taking on various projects that we are giving to him and he's doing exceptionally well. So if you're looking for a website developer, look no further, check out our website. Check out our website, this is it. You'll see the work, the response rate and he's real genuine and good at what he does. Peace from Tyler at Access Denied.",
   },
   {
     project: "Everfit",
@@ -32,18 +38,27 @@ const videoTestimonials: VideoTestimonial[] = [
     engagement: "Website Redesign",
     video: "/testimonials/bovi-client-review.mp4",
     poster: "/testimonials/bovi-client-review.jpg",
+    client: "Renan Borges Vieira",
+    transcript:
+      "Hi, my name is Renan from BOVI Access. Hammad Ahmed did a great job on my new website. I'm very happy with the result. It was always helpful and easy to work with. I really recommend him. Great job Hammad! Cheers!",
   },
   {
     project: "Oasis House",
     engagement: "Website Design",
     video: "/testimonials/oasis-client-review.mp4",
     poster: "/testimonials/oasis-client-review.jpg",
+    client: "Margaret Firth",
+    transcript:
+      "Hi there. This is Margaret. I'm reaching out to say thank you so, so much to Hammad, who works for SadaWorks, for the website that he's designed for oasishouse.net. You've been amazing. You've been very patient. Your professionalism speaks volumes, and I would not hesitate using your company and services again. Thank you so much. We're so pleased the website reflects our values and ethos. You took the time to listen to what we needed and you've executed it. So thank you. If anyone's looking for website designing, please do not hesitate to reach out to Hammad at SadaWorks. Thank you ever so much. Take care. Bye bye.",
   },
   {
     project: "Wiggles Pizza",
     engagement: "Website Support",
     video: "/testimonials/wiggles-pizza-client-review.mp4",
     poster: "/testimonials/wiggles-pizza-client-review.jpg",
+    client: "Stephanie Cameron",
+    transcript:
+      "Hello, this is just a short video from Wiggles Pizza talking about our experience with SadaWorks. Over the last 24 hours Hammad has helped us with our website. We've had issues loading our website and receiving bookings etc. from our clients. Hammad has been amazing. Nothing has ever been too much trouble, always responsive, and has done a great job and we are very pleased and we look forward to using his services in the future.",
   },
 ];
 
@@ -74,7 +89,7 @@ const writtenTestimonials = [
       "Great experience working with Hammad — everything was delivered properly and communication was solid.",
   },
   {
-    name: "Renan Vieira",
+    name: "Renan Borges Vieira",
     service: "Website Development",
     feedback:
       "Hammad did a great job with my website. He was professional, responsive and very patient with all the changes and adjustments I requested. Communication was always easy, and I'm very happy with the final result. I'd definitely recommend him and would be happy to work with him again.",
@@ -182,7 +197,7 @@ export function ClientFeedback() {
           >
             <TrustpilotMark />
             <span>
-              <strong>Excellent</strong> on Trustpilot
+              Read our <strong>reviews on Trustpilot</strong>
             </span>
           </a>
         </div>
@@ -212,8 +227,17 @@ export function ClientFeedback() {
               </div>
               <figcaption>
                 <span>{testimonial.project}</span>
-                <span>{testimonial.engagement}</span>
+                <span>
+                  {testimonial.client && `${testimonial.client} · `}
+                  {testimonial.engagement}
+                </span>
               </figcaption>
+              {testimonial.transcript && (
+                <details className={styles.clientFeedbackTranscript}>
+                  <summary>Read transcript</summary>
+                  <p>{testimonial.transcript}</p>
+                </details>
+              )}
             </figure>
           ))}
         </div>

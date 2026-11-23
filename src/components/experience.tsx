@@ -45,7 +45,15 @@ export function Experience() {
                   &amp; AI Automation Builder
                 </span>
               </h3>
-              <p className={styles.experienceCompany}>SadaWorks</p>
+              <p className={styles.experienceCompany}>
+                <a
+                  href="https://sadaworks.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  SadaWorks
+                </a>
+              </p>
             </div>
             <div className={styles.experienceDetail}>
               <p className={styles.experienceSummary}>
