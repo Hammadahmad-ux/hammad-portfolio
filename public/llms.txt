@@ -21,18 +21,20 @@
 ## Independently checkable proof
 - Lockabea's live website footer reads "Web design by SadaWorks" (https://www.lockabea.com/)
 - Tourch — Reliable Rides is live on the App Store and Google Play
-- Live client websites: alteracademy.co, lockabea.com, oasis-house.net, boviaccess.co.uk
+- Live client websites: alteracademy.co, lockabea.com, oasis-house.net, boviaccess.co.uk, transparentliving.co.uk
 
 ## Named client video reviews
 - Tyler Steadman, Alter Academy / Access Denied — website design and development (alteracademy.co)
 - Renan Borges Vieira, BOVI Access — website redesign (boviaccess.co.uk)
 - Margaret Firth, Oasis House — website design (oasis-house.net)
 - Stephanie Cameron, Wiggles Pizza — emergency website support, site restored within 24 hours
+- Transparent Living — website design and development (transparentliving.co.uk)
 - Everfit — app integration
 - Instant Auto Shopper — AI pricing-intelligence automation
 
 ## Projects: Web Design & Development
 - [Alter Academy](https://hammadahmad.dev/projects/alter-academy): A course and booking website for an auto locksmith training academy. Live site: https://alteracademy.co/ Status: Live.
+- [Transparent Living](https://hammadahmad.dev/projects/transparent-living): A quote-led website for an Essex glass balcony and balustrade installer. Live site: https://transparentliving.co.uk/ Status: Live.
 - [BOVI Access](https://hammadahmad.dev/projects/bovi-access): A business website for rope access and external property maintenance. Live site: https://boviaccess.co.uk/ Status: Client project.
 - [Lockabea](https://hammadahmad.dev/projects/lockabea): A product-led storefront for a personal-security smartwatch. Live site: https://www.lockabea.com/ Status: Live.
 - [Oasis House](https://hammadahmad.dev/projects/oasis-house): A care-focused website for children's residential services. Live site: https://oasis-house.net/ Status: Client project.

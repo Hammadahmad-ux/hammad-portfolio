@@ -12,6 +12,10 @@ const proofs: Proof[] = [
       { label: "lockabea.com", href: "https://www.lockabea.com/" },
       { label: "oasis-house.net", href: "https://oasis-house.net/" },
       { label: "boviaccess.co.uk", href: "https://boviaccess.co.uk/" },
+      {
+        label: "transparentliving.co.uk",
+        href: "https://transparentliving.co.uk/",
+      },
     ],
   },
   {
@@ -32,7 +36,7 @@ const proofs: Proof[] = [
     ],
   },
   {
-    text: "Six client video reviews on this page. Four carry the client's full name and a written transcript: Tyler Steadman (Alter Academy), Renan Borges Vieira (BOVI Access), Margaret Firth (Oasis House) and Stephanie Cameron (Wiggles Pizza).",
+    text: "Seven client video reviews on this page. Four carry the client's full name and a written transcript: Tyler Steadman (Alter Academy), Renan Borges Vieira (BOVI Access), Margaret Firth (Oasis House) and Stephanie Cameron (Wiggles Pizza).",
     links: [{ label: "Watch the reviews", href: "#client-feedback" }],
   },
   {

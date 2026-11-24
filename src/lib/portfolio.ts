@@ -111,6 +111,40 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "transparent-living",
+    title: "Transparent Living",
+    category: "web",
+    shortDescription:
+      "A quote-led website for an Essex glass balcony and balustrade installer.",
+    summary:
+      "A website for an Essex company that makes and fits frameless glass balconies, balustrades and Juliet balconies, built to turn local searches into free site-visit enquiries.",
+    services: ["Website Design", "Web Development"],
+    capabilities: [
+      "Product Pages",
+      "Project Gallery",
+      "Before & After Slider",
+      "Free Quote Enquiries",
+    ],
+    status: "Live",
+    overview:
+      "Transparent Living designs, makes and fits glass balconies, balustrades and Juliet balconies across Essex, the South East and up to Cambridge. The website leads with a clear offer and a free site visit, then lays out the range: frameless and post-and-rail glass balconies, balustrades, Juliet balconies and staircases. Recent projects and a drag-to-compare before and after slider show real jobs, while a postcode checker, a list of areas covered, a how-it-works sequence and common questions on cost, planning permission and Building Regulations answer buyers before they call. Every page keeps phone, WhatsApp and quote enquiries within reach.",
+    features: [
+      "Product Pages for Each Balcony & Balustrade Type",
+      "Recent Projects & Photo Gallery",
+      "Before & After Comparison Slider",
+      "Postcode & Areas-Covered Checker",
+      "Free Site Visit Quote Enquiries",
+      "Planning & Building Regulations FAQs",
+    ],
+    liveUrl: "https://transparentliving.co.uk/",
+    thumbnail: {
+      src: "/projects/transparent-living/thumbnail.webp",
+      alt: "Transparent Living project cover showing the glass balcony website on laptop and mobile.",
+      width: 1440,
+      height: 810,
+    },
+  },
+  {
     slug: "bovi-access",
     title: "BOVI Access",
     category: "web",

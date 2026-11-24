@@ -28,6 +28,12 @@ const videoTestimonials: VideoTestimonial[] = [
     poster: "/testimonials/everfit-client-review.jpg",
   },
   {
+    project: "Transparent Living",
+    engagement: "Website Design & Development",
+    video: "/testimonials/transparent-living-client-review.mp4",
+    poster: "/testimonials/transparent-living-client-review.jpg",
+  },
+  {
     project: "Instant Auto Shopper",
     engagement: "AI & Automation",
     video: "/testimonials/instant-auto-shopper-client-review.mp4",
